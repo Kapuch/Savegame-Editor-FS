@@ -1,0 +1,52 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Farming_Simulator_15_Savegame_Editor"
+        xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="Farming_Simulator_15_Savegame_Editor.MainWindow"
+        mc:Ignorable="d"
+        Title="Farming Simulator Savegame Editor" Height="300" Width="650">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="203*"/>
+            <ColumnDefinition Width="228*"/>
+            <ColumnDefinition Width="211*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="191*"/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="potatoBox" HorizontalAlignment="Left" Height="26" Margin="106,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,0.5" Grid.Row="2" Grid.Column="1" d:IsLocked="True"/>
+        <TextBox x:Name="barleyBox" HorizontalAlignment="Left" Height="26" Margin="80,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Row="2" d:IsLocked="True"/>
+        <TextBox x:Name="wheatBox" HorizontalAlignment="Left" Height="26" Margin="80,41,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Row="2" d:IsLocked="True"/>
+        <TextBox x:Name="rapeBox" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="80,74,0,0" Grid.Row="2" d:IsLocked="True"/>
+        <TextBox x:Name="woodChipsBox" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="106,136,0,0" Grid.Row="2" Grid.Column="1" d:IsLocked="True"/>
+        <TextBox x:Name="maizeBox" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="80,105,0,0" Grid.Row="2" d:IsLocked="True"/>
+        <TextBox x:Name="liquidManureBox" HorizontalAlignment="Left" Height="27" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="78,41,0,0" Grid.Row="2" Grid.Column="2" d:IsLocked="True"/>
+        <TextBox x:Name="manureBox" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="78,8,0,0" Grid.Row="2" Grid.Column="2" d:IsLocked="True"/>
+        <TextBox x:Name="sugarBeetBox" HorizontalAlignment="Left" Height="26" Margin="106,41,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Row="2" Grid.Column="1" d:IsLocked="True"/>
+        <TextBox x:Name="chaffBox" HorizontalAlignment="Left" Height="26" Margin="106,74,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Row="2" Grid.Column="1" d:IsLocked="True"/>
+        <Label x:Name="potatoLabel" Content="Ziemniaki" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="40,10,0,0" Grid.Row="2" Height="26" Width="61" Grid.Column="1" d:IsLocked="True"/>
+        <Label x:Name="barleyLabel" Content="Jęczmień" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="17,10,0,0" Grid.Row="2" Height="26" Width="58" d:IsLocked="True"/>
+        <Label x:Name="wheatLabel" Content="Pszenica" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,41,0,0" Grid.Row="2" Height="26" Width="55" d:IsLocked="True"/>
+        <Label x:Name="rapeLabel" Content="Rzepak" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="27,74,0,0" Grid.Row="2" Height="26" Width="48" d:IsLocked="True"/>
+        <Label x:Name="maizeLabel" Content="Kukurydza" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,105,0,0" Grid.Row="2" Height="26" Width="65" d:IsLocked="True"/>
+        <Label x:Name="sugarBeetLabel" Content="Buraki cukrowe" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,41,0,0" Grid.Row="2" Height="26" Width="91" Grid.Column="1" d:IsLocked="True"/>
+        <Label x:Name="woodChipsLabel" Content="Trociny" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="54,136,0,0" Grid.Row="2" Height="26" Width="47" Grid.Column="1" d:IsLocked="True"/>
+        <Label x:Name="chaffLabel" Content="Plewy / Sieczka" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="11,74,0,0" Grid.Row="2" Height="26" Width="90" Grid.Column="1" d:IsLocked="True"/>
+        <Label x:Name="manureLabel" Content="Obornik" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,8,0,0" Height="26" Grid.Row="2" Width="53" Grid.Column="2" d:IsLocked="True"/>
+        <Label x:Name="liquidManureLabel" Content="Gnojowica" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,41,0,0" Grid.Row="2" Height="26" Width="65" Grid.Column="2" d:IsLocked="True"/>
+        <TextBox x:Name="grassBox" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="106,105,0,0" Grid.Row="2" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" d:IsLocked="True"/>
+        <Label x:Name="grassLabel" Content="Trawa" Grid.Column="1" HorizontalAlignment="Left" Margin="61,105,0,0" Grid.Row="2" VerticalAlignment="Top" Height="26" Width="40" d:IsLocked="True"/>
+        <Label x:Name="siloGridLabel" Content="Silosy:" Margin="10,0,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" HorizontalAlignment="Left" Width="43" d:IsLocked="True"/>
+        <Label x:Name="moveSilioGridLabel" Content="Silosy przejazdowe i stosy:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="10,2,0,0" Grid.Row="1" d:IsLocked="True"/>
+        <Label x:Name="manureGridLabel" Content="Nawozy:" Grid.Column="2" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Grid.Row="1" d:IsLocked="True"/>
+        <Button x:Name="button" Content="Button" Grid.Column="2" HorizontalAlignment="Left" Margin="65,10,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+        <ComboBox x:Name="DIRcomboBox" HorizontalAlignment="Left" Margin="53,10,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="0">
+            <System:String>Wybierz ręcznie</System:String>
+        </ComboBox>
+
+    </Grid>
+</Window>
