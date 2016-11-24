@@ -65,7 +65,12 @@ namespace Farming_Simulator_15_Savegame_Editor
             siloBox.Add(chaffBox);
             return siloBox;
         }
-        /// <summary>wyszukukuje katalogi gier w Dokumentach</summary>
+
+        private void ReloadDirButton_Click(object sender, RoutedEventArgs e)
+        {
+            FileSelection.dirAutoSearchReload(this);
+        }
+
         //public void dirAutoSearch()
         //{
         //    for(int i = 2011 ; i<=2017 ; i+=2)
@@ -74,6 +79,6 @@ namespace Farming_Simulator_15_Savegame_Editor
         //        DIRcomboBox.Items.Add("FarmingSimulator"+i); 
         //    }
         //}
-       
+
     }
 }
