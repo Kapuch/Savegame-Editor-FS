@@ -26,7 +26,8 @@ namespace Farming_Simulator_15_Savegame_Editor
         {
             InitializeComponent();
             siloBox = ControlListGenerate();
-            dirAutoSearch();
+            //dirAutoSearch();
+            FileSelection.dirAutoSearch(this);
             
         }
         ///<summary>Lista kontrolek textBox</summary>
@@ -65,15 +66,14 @@ namespace Farming_Simulator_15_Savegame_Editor
             return siloBox;
         }
         /// <summary>wyszukukuje katalogi gier w Dokumentach</summary>
-        public void dirAutoSearch()
-        {
-            for(int i = 2011 ; i<=2017 ; i+=2)
-            if (Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)+@"\My Games\farmingsimulator"+i))
-            {
-                DIRcomboBox.Items.Add("FarmingSimulator"+i);
-                    
-            }
-        }
+        //public void dirAutoSearch()
+        //{
+        //    for(int i = 2011 ; i<=2017 ; i+=2)
+        //    if (Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)+@"\My Games\farmingsimulator"+i))
+        //    {
+        //        DIRcomboBox.Items.Add("FarmingSimulator"+i); 
+        //    }
+        //}
        
     }
 }
