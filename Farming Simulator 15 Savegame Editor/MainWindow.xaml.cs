@@ -38,7 +38,7 @@ namespace Farming_Simulator_15_Savegame_Editor
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            Savegame.Load(this, FileSelection.manualChoice(this));
+            Savegame.Load(FileSelection.manualChoice(this),this,siloBox);
         }
         private void ReloadDirButton_Click(object sender, RoutedEventArgs e)
         {
@@ -57,6 +57,12 @@ namespace Farming_Simulator_15_Savegame_Editor
                 SAVEcomboBox.Items.Clear();
                 SAVEcomboBox.IsEnabled = false;
             }
+        }
+
+        private void SAVEcomboBox_DropDownClosed(object sender, EventArgs e)
+        {
+            if (SAVEcomboBox.SelectedIndex>=0)
+                Savegame.Load(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\My Games\" + DIRcomboBox.Text + @"\" + SAVEcomboBox.Text + @"\careerSavegame.xml", this, siloBox);
         }
     }
 }
