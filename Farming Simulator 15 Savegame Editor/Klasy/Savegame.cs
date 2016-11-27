@@ -78,6 +78,9 @@ namespace Farming_Simulator_15_Savegame_Editor
                         }
                         #endregion
                     }
+                    XmlNode myNode = Xcareer.SelectSingleNode("/careerSavegame");
+                    control.moneyBox.IsEnabled = true;
+                    control.moneyBox.Text = myNode.Attributes["money"].Value;
                 }
                 catch (Exception ex)
                 {

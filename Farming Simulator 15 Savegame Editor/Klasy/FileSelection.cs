@@ -20,7 +20,7 @@ namespace Farming_Simulator_15_Savegame_Editor
         {
             control.DIRcomboBox.Items.Clear();
             control.DIRcomboBox.Items.Add("Wybierz ręcznie");
-            for (int i = 2011; i <= 2017; i += 2)
+            for (int i = 2011; i <= 2015; i += 2) // tylko wersja 2015 i wcześniejsze ze względu na zmiany wprowadzone w wersji 2017
                 if (Directory.Exists(mainPatch + @"farmingsimulator" + i))
                 {
                     control.DIRcomboBox.Items.Add("FarmingSimulator" + i);
