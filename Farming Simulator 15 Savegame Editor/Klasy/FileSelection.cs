@@ -36,7 +36,7 @@ namespace Farming_Simulator_15_Savegame_Editor
                 for (int i = 1; i <= 30; i++)
                     if (Directory.Exists(mainPatch + control.DIRcomboBox.Text + @"\savegame" + i))
                     {
-                        if(File.Exists(mainPatch + control.DIRcomboBox.Text + @"\savegame" + i + @"\economy.xml"))
+                        if(File.Exists(mainPatch + control.DIRcomboBox.Text + @"\savegame" + i + @"\VEHICLES.xml"))
                         control.SAVEcomboBox.Items.Add("savegame" + i);
                     }
             }
