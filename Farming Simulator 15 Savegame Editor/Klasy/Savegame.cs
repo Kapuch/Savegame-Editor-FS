@@ -85,7 +85,7 @@ namespace Farming_Simulator_15_Savegame_Editor
                 }
             }   
         }
-        public static void Save(string patch, MainWindow control, List<TextBox> allBox)
+        public static void Save(string patch, MainWindow control)
         {
             if (File.Exists(patch))
             {

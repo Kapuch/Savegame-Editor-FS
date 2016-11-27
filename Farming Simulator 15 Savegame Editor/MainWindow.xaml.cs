@@ -70,7 +70,7 @@ namespace Farming_Simulator_15_Savegame_Editor
 
         private void saveButton_Click(object sender, RoutedEventArgs e)
         {
-            Savegame.Save(savePatch, this, siloBox);
+            Savegame.Save(savePatch, this);
         }
     }
 }

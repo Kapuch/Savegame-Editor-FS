@@ -43,11 +43,15 @@
         <Label x:Name="siloGridLabel" Content="Silosy:" Margin="10,0,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" HorizontalAlignment="Left" Width="43" d:IsLocked="True"/>
         <Label x:Name="moveSilioGridLabel" Content="Silosy przejazdowe i stosy:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="10,2,0,0" Grid.Row="1" d:IsLocked="True"/>
         <Label x:Name="manureGridLabel" Content="Nawozy:" Grid.Column="2" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Grid.Row="1" d:IsLocked="True"/>
-        <Button x:Name="OpenButton" Content="Otwórz" Grid.Column="1" HorizontalAlignment="Left" Margin="143,25,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+        <Button x:Name="OpenButton" Content="Otwórz" Grid.Column="1" HorizontalAlignment="Left" Margin="143,25,0,0" VerticalAlignment="Top" Width="75" Click="button_Click" d:IsLocked="True"/>
         <ComboBox x:Name="DIRcomboBox" HorizontalAlignment="Left" Margin="51,25,0,0" VerticalAlignment="Top" Width="147" SelectedIndex="0" DropDownClosed="DIRcomboBox_DropDownClosed" d:IsLocked="True"/>
-        <Button x:Name="ReloadDirButton" Content="R" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="38" Click="ReloadDirButton_Click" d:IsLocked="True"/>
         <ComboBox x:Name="SAVEcomboBox" HorizontalAlignment="Left" Margin="0,25,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1" IsEnabled="False" DropDownClosed="SAVEcomboBox_DropDownClosed" d:IsLocked="True"/>
-        <Button x:Name="saveButton" Content="Zapisz" Grid.Column="2" HorizontalAlignment="Left" Margin="10,25,0,0" VerticalAlignment="Top" Width="75" Click="saveButton_Click"/>
+        <Button x:Name="saveButton" Content="Zapisz" Grid.Column="2" HorizontalAlignment="Left" Margin="10,25,0,0" VerticalAlignment="Top" Width="75" Click="saveButton_Click" d:IsLocked="True"/>
+        <TextBox x:Name="moneyBox" Grid.Column="2" HorizontalAlignment="Left" Height="26" Margin="78,105,0,0" Grid.Row="2" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" d:IsLocked="True"/>
+        <Label x:Name="otherLabel" Content="Inne:" Grid.Column="2" HorizontalAlignment="Left" Margin="10,74,0,0" Grid.Row="2" VerticalAlignment="Top" d:IsLocked="True"/>
+        <Label x:Name="moneyLabel" Content="Gotówka" Grid.Column="2" HorizontalAlignment="Left" Margin="16,105,0,0" Grid.Row="2" VerticalAlignment="Top" d:IsLocked="True"/>
+        <Label x:Name="verLabel" Content="Katalog:" HorizontalAlignment="Left" Margin="51,0,0,0" VerticalAlignment="Top" d:IsLocked="True"/>
+        <Label x:Name="saveLabel" Content="Zapis:" Grid.Column="1" HorizontalAlignment="Left" Margin="0,-1,0,0" VerticalAlignment="Top" d:IsLocked="True"/>
 
     </Grid>
 </Window>
