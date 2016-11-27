@@ -138,6 +138,8 @@ namespace Farming_Simulator_15_Savegame_Editor
                         }
                         #endregion
                     }
+                    XmlNode myNode = Xcareer.SelectSingleNode("/careerSavegame");
+                    myNode.Attributes["money"].Value = control.moneyBox.Text;
                     Xcareer.Save(patch);
                     MessageBox.Show("Zapisano.");
                 }
