@@ -10,7 +10,7 @@ namespace Farming_Simulator_15_Savegame_Editor
     class ControlListGenerate
     {
         /// <summary>Zwraca listę kontrolek textBox</summary>
-        public static List<TextBox> silo(MainWindow control)
+        public static List<TextBox> siloBox(MainWindow control)
         {
             List<TextBox> siloBox = new List<TextBox>();
             siloBox.Add(control.potatoBox);

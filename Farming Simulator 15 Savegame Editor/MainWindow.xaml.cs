@@ -25,7 +25,7 @@ namespace Farming_Simulator_15_Savegame_Editor
         public MainWindow()
         {
             InitializeComponent();
-            siloBox = ControlListGenerate.silo(this);
+            siloBox = ControlListGenerate.siloBox(this);
             FileSelection.dirAutoSearch(this);     
         }
         ///<summary>Lista kontrolek textBox</summary>
@@ -38,7 +38,20 @@ namespace Farming_Simulator_15_Savegame_Editor
         private void ReloadDirButton_Click(object sender, RoutedEventArgs e)
         {
             foreach (var k in siloBox)
-                k.Text = "g";
+                k.IsEnabled=true;
+        }
+        private void DIRcomboBox_DropDownClosed(object sender, EventArgs e)
+        {
+            if (DIRcomboBox.SelectedIndex > 0)
+            {
+                SAVEcomboBox.IsEnabled = true;
+                FileSelection.saveAutoSearch(this);
+            }
+            else
+            {
+                SAVEcomboBox.Items.Clear();
+                SAVEcomboBox.IsEnabled = false;
+            }
         }
     }
 }
