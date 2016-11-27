@@ -85,5 +85,60 @@ namespace Farming_Simulator_15_Savegame_Editor
                 }
             }   
         }
+        public static void Save(string patch, MainWindow control, List<TextBox> allBox)
+        {
+            XmlDocument Xcareer = new XmlDocument();
+            try
+            {
+                Xcareer.Load(patch);
+                XmlNodeList XNodeSilo = Xcareer.GetElementsByTagName("farmSiloAmount");
+                foreach (XmlNode silo in XNodeSilo)
+                {
+                    #region wyprowadzenie wartosci z odpowiednich textBoxów
+                    switch (silo.Attributes["fillType"].Value)
+                    {
+                        case "potato":
+                            silo.Attributes["amount"].Value = control.potatoBox.Text;
+                            break;
+                        case "rape":
+                            silo.Attributes["amount"].Value = control.rapeBox.Text;
+                            break;
+                        case "wheat":
+                            silo.Attributes["amount"].Value = control.wheatBox.Text;
+                            break;
+                        case "barley":
+                            silo.Attributes["amount"].Value = control.barleyBox.Text;
+                            break;
+                        case "maize":
+                            silo.Attributes["amount"].Value = control.maizeBox.Text;
+                            break;
+                        case "sugarBeet":
+                            silo.Attributes["amount"].Value = control.sugarBeetBox.Text;
+                            break;
+                        case "woodChips":
+                            silo.Attributes["amount"].Value = control.woodChipsBox.Text;
+                            break;
+                        case "grass":
+                            silo.Attributes["amount"].Value = control.grassBox.Text;
+                            break;
+                        case "manure":
+                            silo.Attributes["amount"].Value = control.manureBox.Text;
+                            break;
+                        case "liquidManure":
+                            silo.Attributes["amount"].Value = control.liquidManureBox.Text;
+                            break;
+                        case "chaff":
+                            silo.Attributes["amount"].Value = control.chaffBox.Text;
+                            break;
+                    }
+                    #endregion
+                }
+                Xcareer.Save(patch);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }
