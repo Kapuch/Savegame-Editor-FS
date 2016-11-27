@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO; //Directory
 using Microsoft.Win32; //OpenFileDialog
+using System.Xml;
 
 namespace Farming_Simulator_15_Savegame_Editor
 {
@@ -30,10 +31,14 @@ namespace Farming_Simulator_15_Savegame_Editor
         }
         ///<summary>Lista kontrolek textBox</summary>
         List<TextBox> siloBox = new List<TextBox>();
-        //OpenFileDialog FileDialog = new OpenFileDialog();
+        
+
+
+
+
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            FileSelection.manualChoice(this);
+            Savegame.Load(this, FileSelection.manualChoice(this));
         }
         private void ReloadDirButton_Click(object sender, RoutedEventArgs e)
         {
