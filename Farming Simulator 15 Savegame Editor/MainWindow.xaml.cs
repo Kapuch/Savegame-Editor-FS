@@ -26,23 +26,17 @@ namespace Farming_Simulator_15_Savegame_Editor
         public MainWindow()
         {
             InitializeComponent();
-            siloBox = ControlListGenerate.siloBox(this);
+            listBox = ControlListGenerate.listBox(this);
             FileSelection.dirAutoSearch(this);     
         }
         ///<summary>Lista kontrolek textBox</summary>
-        List<TextBox> siloBox = new List<TextBox>();
+        List<TextBox> listBox = new List<TextBox>();
         string savePatch = null;
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
             savePatch = FileSelection.manualChoice(this);
-            Savegame.Load(savePatch,this,siloBox);
-        }
-
-        private void ReloadDirButton_Click(object sender, RoutedEventArgs e)
-        {
-            foreach (var k in siloBox)
-                k.IsEnabled=true;
+            Savegame.Load(savePatch,this,listBox);
         }
 
         private void DIRcomboBox_DropDownClosed(object sender, EventArgs e)
@@ -64,7 +58,7 @@ namespace Farming_Simulator_15_Savegame_Editor
             if (SAVEcomboBox.SelectedIndex>=0)
             {
                 savePatch = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\My Games\" + DIRcomboBox.Text + @"\" + SAVEcomboBox.Text + @"\careerSavegame.xml";
-                Savegame.Load(savePatch, this, siloBox);
+                Savegame.Load(savePatch, this, listBox);
             }
         }
 
