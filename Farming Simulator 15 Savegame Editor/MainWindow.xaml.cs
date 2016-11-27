@@ -31,7 +31,7 @@ namespace Farming_Simulator_15_Savegame_Editor
         }
         ///<summary>Lista kontrolek textBox</summary>
         List<TextBox> siloBox = new List<TextBox>();
-        string savePatch;
+        string savePatch = null;
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
@@ -66,6 +66,11 @@ namespace Farming_Simulator_15_Savegame_Editor
                 savePatch = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\My Games\" + DIRcomboBox.Text + @"\" + SAVEcomboBox.Text + @"\careerSavegame.xml";
                 Savegame.Load(savePatch, this, siloBox);
             }
+        }
+
+        private void saveButton_Click(object sender, RoutedEventArgs e)
+        {
+            Savegame.Save(savePatch, this, siloBox);
         }
     }
 }
