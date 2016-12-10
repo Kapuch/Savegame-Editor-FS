@@ -1,0 +1,17 @@
+﻿<Window x:Class="Farming_Simulator_15_Savegame_Editor.FieldManageWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Farming_Simulator_15_Savegame_Editor"
+        mc:Ignorable="d"
+        Title="FieldManageWindow" Height="300" Width="300">
+    <Grid>
+        <DataGrid x:Name="fieldDataGrid" HorizontalAlignment="Left" VerticalAlignment="Top" Height="234" Width="110" AutoGenerateColumns="False" Margin="10,10,0,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Numer}" Header="Numer" IsReadOnly="True"/>
+                <DataGridCheckBoxColumn Binding="{Binding Stan, Mode=TwoWay}" Header="Stan"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

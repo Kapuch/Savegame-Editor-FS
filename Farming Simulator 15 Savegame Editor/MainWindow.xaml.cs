@@ -32,6 +32,7 @@ namespace Farming_Simulator_15_Savegame_Editor
         ///<summary>Lista kontrolek textBox</summary>
         List<TextBox> listBox = new List<TextBox>();
         string savePath = null;
+        string economyPath = null;
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
@@ -61,8 +62,9 @@ namespace Farming_Simulator_15_Savegame_Editor
             {
                 savePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\My Games\" + DIRcomboBox.Text + @"\" + SAVEcomboBox.Text + @"\careerSavegame.xml";
                 Savegame.Load(savePath, this, listBox);
-                statusLabel.Content=SAVEcomboBox.Text+" ("+DIRcomboBox.Text+")";
-                FieldManageButton.IsEnabled = File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\My Games\" + DIRcomboBox.Text + @"\" + SAVEcomboBox.Text + @"\economy.xml") ? true : false;
+                statusLabel.Content = SAVEcomboBox.Text + " (" + DIRcomboBox.Text + ")";
+                economyPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\My Games\" + DIRcomboBox.Text + @"\" + SAVEcomboBox.Text + @"\economy.xml";
+                FieldManageButton.IsEnabled = File.Exists(economyPath) ? true : false;
             }
         }
 
@@ -75,6 +77,12 @@ namespace Farming_Simulator_15_Savegame_Editor
         {
             if (!char.IsDigit(e.Text, e.Text.Length - 1))
                 e.Handled = true;
+        }
+
+        private void FieldManageButton_Click(object sender, RoutedEventArgs e)
+        {
+            FieldManageWindow economyWindow = new FieldManageWindow(economyPath);
+            economyWindow.Show();
         }
     }
 }

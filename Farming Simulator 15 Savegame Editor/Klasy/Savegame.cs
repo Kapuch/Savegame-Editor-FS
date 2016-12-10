@@ -89,14 +89,14 @@ namespace Farming_Simulator_15_Savegame_Editor
                 }
             }   
         }
-        public static void Save(string patch, MainWindow control)
+        public static void Save(string path, MainWindow control)
         {
-            if (File.Exists(patch))
+            if (File.Exists(path))
             {
                 XmlDocument Xcareer = new XmlDocument();
                 try
                 {
-                    Xcareer.Load(patch);
+                    Xcareer.Load(path);
                     XmlNodeList XNodeSilo = Xcareer.GetElementsByTagName("farmSiloAmount");
                     foreach (XmlNode silo in XNodeSilo)
                     {
@@ -141,7 +141,7 @@ namespace Farming_Simulator_15_Savegame_Editor
                     }
                     XmlNode myNode = Xcareer.SelectSingleNode("/careerSavegame");
                     myNode.Attributes["money"].Value = control.moneyBox.Text;
-                    Xcareer.Save(patch);
+                    Xcareer.Save(path);
                     MessageBox.Show("Zapisano.");
                 }
                 catch (Exception ex)

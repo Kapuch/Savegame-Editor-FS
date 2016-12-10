@@ -54,7 +54,7 @@
         <Label x:Name="saveLabel" Content="Zapis:" Grid.Column="1" HorizontalAlignment="Left" Margin="25,39,0,0" VerticalAlignment="Top" Height="26" Width="42"/>
         <Label x:Name="wyborLabel" Content="Aktualnie wybrano:&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,162,0,0" VerticalAlignment="Top" Height="26" Width="112" Grid.Row="2" IsEnabled="False" d:IsLocked="True"/>
         <Label x:Name="statusLabel" Content="Nie wybrano" HorizontalAlignment="Left" Margin="122,162,0,0" VerticalAlignment="Top" Width="361" IsEnabled="False" Height="26" Grid.Row="2" Grid.ColumnSpan="3" d:IsLocked="True"/>
-        <Button x:Name="FieldManageButton" Content="Zarządzaj" Grid.Column="2" HorizontalAlignment="Left" Margin="78,136,0,0" Grid.Row="2" VerticalAlignment="Top" Width="120" IsEnabled="False" Height="26" ToolTip=""/>
+        <Button x:Name="FieldManageButton" Content="Zarządzaj" Grid.Column="2" HorizontalAlignment="Left" Margin="78,136,0,0" Grid.Row="2" VerticalAlignment="Top" Width="120" IsEnabled="False" Height="26" Click="FieldManageButton_Click"/>
         <Label x:Name="fieldLabel" Content="Pola" Grid.Column="2" HorizontalAlignment="Left" Margin="41,136,0,0" Grid.Row="2" VerticalAlignment="Top" ToolTip="Zarządzaj posiadanymi polami. Niedostępne w wyborze ręcznym lub wersji 2011 i starszej" Height="26" Width="32"/>
 
     </Grid>
