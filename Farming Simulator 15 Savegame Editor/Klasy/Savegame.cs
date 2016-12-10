@@ -7,6 +7,7 @@ using System.Xml;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
+using System.Text.RegularExpressions;
 
 namespace Farming_Simulator_15_Savegame_Editor
 {
@@ -32,47 +33,47 @@ namespace Farming_Simulator_15_Savegame_Editor
                         switch (silo.Attributes["fillType"].Value)
                         {
                             case "potato":
-                                control.potatoBox.Text = silo.Attributes["amount"].Value;
+                                control.potatoBox.Text = Format.GiveMeDigits(silo.Attributes["amount"].Value);
                                 control.potatoBox.IsEnabled = true;
                                 break;
                             case "rape":
-                                control.rapeBox.Text = silo.Attributes["amount"].Value;
+                                control.rapeBox.Text = Format.GiveMeDigits(silo.Attributes["amount"].Value);
                                 control.rapeBox.IsEnabled = true;
                                 break;
                             case "wheat":
-                                control.wheatBox.Text = silo.Attributes["amount"].Value;
+                                control.wheatBox.Text = Format.GiveMeDigits(silo.Attributes["amount"].Value);
                                 control.wheatBox.IsEnabled = true;
                                 break;
                             case "barley":
-                                control.barleyBox.Text = silo.Attributes["amount"].Value;
+                                control.barleyBox.Text = Format.GiveMeDigits(silo.Attributes["amount"].Value);
                                 control.barleyBox.IsEnabled = true;
                                 break;
                             case "maize":
-                                control.maizeBox.Text = silo.Attributes["amount"].Value;
+                                control.maizeBox.Text = Format.GiveMeDigits(silo.Attributes["amount"].Value);
                                 control.maizeBox.IsEnabled = true;
                                 break;
                             case "sugarBeet":
-                                control.sugarBeetBox.Text = silo.Attributes["amount"].Value;
+                                control.sugarBeetBox.Text = Format.GiveMeDigits(silo.Attributes["amount"].Value);
                                 control.sugarBeetBox.IsEnabled = true;
                                 break;
                             case "woodChips":
-                                control.woodChipsBox.Text = silo.Attributes["amount"].Value;
+                                control.woodChipsBox.Text = Format.GiveMeDigits(silo.Attributes["amount"].Value);
                                 control.woodChipsBox.IsEnabled = true;
                                 break;
                             case "grass":
-                                control.grassBox.Text = silo.Attributes["amount"].Value;
+                                control.grassBox.Text = Format.GiveMeDigits(silo.Attributes["amount"].Value);
                                 control.grassBox.IsEnabled = true;
                                 break;
                             case "manure":
-                                control.manureBox.Text = silo.Attributes["amount"].Value;
+                                control.manureBox.Text = Format.GiveMeDigits(silo.Attributes["amount"].Value);
                                 control.manureBox.IsEnabled = true;
                                 break;
                             case "liquidManure":
-                                control.liquidManureBox.Text = silo.Attributes["amount"].Value;
+                                control.liquidManureBox.Text = Format.GiveMeDigits(silo.Attributes["amount"].Value);
                                 control.liquidManureBox.IsEnabled = true;
                                 break;
                             case "chaff":
-                                control.chaffBox.Text = silo.Attributes["amount"].Value;
+                                control.chaffBox.Text = Format.GiveMeDigits(silo.Attributes["amount"].Value);
                                 control.chaffBox.IsEnabled = true;
                                 break;
                         }

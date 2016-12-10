@@ -31,12 +31,14 @@ namespace Farming_Simulator_15_Savegame_Editor
         }
         ///<summary>Lista kontrolek textBox</summary>
         List<TextBox> listBox = new List<TextBox>();
-        string savePatch = null;
+        string savePath = null;
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            savePatch = FileSelection.manualChoice(this);
-            Savegame.Load(savePatch,this,listBox);
+            savePath = FileSelection.manualChoice(this);
+            Savegame.Load(savePath, this, listBox);
+            FieldManageButton.IsEnabled = false;
+            statusLabel.Content = "Wybrano ręcznie";
         }
 
         private void DIRcomboBox_DropDownClosed(object sender, EventArgs e)
@@ -57,14 +59,22 @@ namespace Farming_Simulator_15_Savegame_Editor
         {
             if (SAVEcomboBox.SelectedIndex>=0)
             {
-                savePatch = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\My Games\" + DIRcomboBox.Text + @"\" + SAVEcomboBox.Text + @"\careerSavegame.xml";
-                Savegame.Load(savePatch, this, listBox);
+                savePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\My Games\" + DIRcomboBox.Text + @"\" + SAVEcomboBox.Text + @"\careerSavegame.xml";
+                Savegame.Load(savePath, this, listBox);
+                statusLabel.Content=SAVEcomboBox.Text+" ("+DIRcomboBox.Text+")";
+                FieldManageButton.IsEnabled = File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\My Games\" + DIRcomboBox.Text + @"\" + SAVEcomboBox.Text + @"\economy.xml") ? true : false;
             }
         }
 
         private void saveButton_Click(object sender, RoutedEventArgs e)
         {
-            Savegame.Save(savePatch, this);
+            Savegame.Save(savePath, this);
+        }
+
+        private void Box_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            if (!char.IsDigit(e.Text, e.Text.Length - 1))
+                e.Handled = true;
         }
     }
 }

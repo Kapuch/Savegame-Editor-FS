@@ -65,6 +65,7 @@
     </Compile>
     <Compile Include="Klasy\ControlListGenerate.cs" />
     <Compile Include="Klasy\FileSelection.cs" />
+    <Compile Include="Klasy\Format.cs" />
     <Compile Include="Klasy\Savegame.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
