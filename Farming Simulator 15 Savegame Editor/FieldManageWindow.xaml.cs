@@ -23,7 +23,21 @@ namespace Farming_Simulator_15_Savegame_Editor
         {
             InitializeComponent();
             Economy.Load(path, this, pola);
+            this.path = path;
+
         }
+        private string path;
         private List<Field> pola = new List<Field>();
+
+        private void saveButton_Click(object sender, RoutedEventArgs e)
+        {
+            Economy.Save(path, this, pola);
+            Close();
+        }
+
+        private void closeButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

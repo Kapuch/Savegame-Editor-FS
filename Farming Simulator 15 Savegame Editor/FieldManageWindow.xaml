@@ -5,13 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Farming_Simulator_15_Savegame_Editor"
         mc:Ignorable="d"
-        Title="FieldManageWindow" Height="300" Width="300">
+        Title="Zarządzaj polami" Height="300" Width="300">
     <Grid>
-        <DataGrid x:Name="fieldDataGrid" HorizontalAlignment="Left" VerticalAlignment="Top" Height="234" Width="110" AutoGenerateColumns="False" Margin="10,10,0,0">
+        <DataGrid x:Name="fieldDataGrid" HorizontalAlignment="Left" VerticalAlignment="Top" Height="234" Width="154" AutoGenerateColumns="False" Margin="10,10,0,0">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Numer}" Header="Numer" IsReadOnly="True"/>
-                <DataGridCheckBoxColumn Binding="{Binding Stan, Mode=TwoWay}" Header="Stan"/>
+                <DataGridCheckBoxColumn Binding="{Binding Stan, Mode=TwoWay}" Header="Na własność"/>
             </DataGrid.Columns>
         </DataGrid>
+        <Button x:Name="saveButton" Content="Zapisz i zakończ" HorizontalAlignment="Left" Margin="187,93,0,0" VerticalAlignment="Top" Width="95" Click="saveButton_Click"/>
+        <Button x:Name="closeButton" Content="Zamknij" HorizontalAlignment="Left" Margin="187,118,0,0" VerticalAlignment="Top" Width="95" Height="20" Click="closeButton_Click"/>
     </Grid>
 </Window>

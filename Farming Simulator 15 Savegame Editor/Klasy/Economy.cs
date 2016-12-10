@@ -30,5 +30,24 @@ namespace Farming_Simulator_15_Savegame_Editor
                 MessageBox.Show(ex.ToString());
             }
         }
+        public static void Save(string path, FieldManageWindow control, List<Field> fields)
+        {
+            try
+            {
+                XmlDocument Xeconomy = new XmlDocument();
+                Xeconomy.Load(path);
+                XmlNodeList fieldList = Xeconomy.GetElementsByTagName("field");
+                foreach (XmlNode elem in fieldList)
+                {
+                    elem.Attributes["ownedByPlayer"].Value = fields.Single(x => x.Numer == elem.Attributes["number"].Value).Stan.ToString();
+                }
+                Xeconomy.Save(path);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            
+        }
     }
 }
