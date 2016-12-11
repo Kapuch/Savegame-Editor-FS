@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<careerVehicles>
+    <vehicle id="1" filename="data/vehicles/steerable/sampoRosenlew/sampoRosenlewC6.xml" isAbsolute="true" tourId="tourCombine" foldAnimTime="1" fuelFillLevel="380" cruiseControl="26" operatingTime="0" fillLevel="0" fillType="unknown" isStrawEnabled="false" workedHectars="0" dirtAmount="0.35000002384186">
+       <component1 position="280.52264404297 157.63230895996 93.036224365234" rotation="3.0511634349823 -0.01582895219326 -3.0538520812988" />
+    </vehicle>
+    <vehicle id="2" filename="data/vehicles/cutters/sampoRosenlew/sampoRosenlewC6.xml" isAbsolute="true" foldAnimTime="0" dirtAmount="0.45000001788139">
+       <component1 position="280.50942993164 158.01434326172 88.898788452148" rotation="-3.0178558826447 -0.0097451498731971 -3.0668103694916" />
+       <movingTool1 rotation="0"/>
+       <movingTool2 rotation="0"/>
+    </vehicle>
+    <vehicle id="3" filename="data/vehicles/steerable/huerlimann/huerlimannH488.xml" isAbsolute="true" tourId="tourTractor1" fuelFillLevel="100"  attacherJointComboDir="-1" dirtAmount="0.5">
+       <component1 position="221.00424194336 152.80856323242 59.998138427734" rotation="-0.0090739829465747 -0.0028010851237923 0.14540868997574" />
+    </vehicle>
+    <vehicle id="4" filename="data/vehicles/trailers/brantner/brantnerE8041.xml" isAbsolute="true" tourId="tourTrailer" color="0.053 0.087 0.024 1" fillLevel="0" fillType="unknown" dirtAmount="0.60000002384186">
+       <component1 position="221.01647949219 152.74176025391 54.495094299316" rotation="-0.0087826419621706 -0.002927293535322 0.13244996964931" />
+    </vehicle>
+    <vehicle id="5" filename="data/vehicles/steerable/deutz/deutzAgroStar661.xml" isAbsolute="true" tourId="tourTractor2" fuelFillLevel="290"  attacherJointComboDir="-1" dirtAmount="0.5">
+       <component1 position="587.02679443359 167.23992919922 470.04177856445" rotation="3.063524723053 -0.013301930390298 -3.0867722034454" />
+    </vehicle>
+    <vehicle id="6" filename="data/vehicles/tools/koeckerling/koeckerlingTrio300M.xml" isAbsolute="true" tourId="tourCultivator" foldAnimTime="0" dirtAmount="0.5">
+       <component1 position="587.00524902344 166.65963745117 474.23904418945" rotation="3.0731928348541 0.0012357210507616 -3.0990409851074" />
+    </vehicle>
+    <vehicle id="7" filename="data/vehicles/tools/suer/suerSB1000.xml" isAbsolute="true" dirtAmount="0.60000002384186">
+       <component1 position="586.95129394531 167.75671386719 466.94668579102" rotation="3.0635645389557 -0.01330176461488 -3.0867714881897" />
+    </vehicle>
+    <vehicle id="8" filename="data/vehicles/steerable/deutz/deutzAgroStar661.xml" isAbsolute="true" tourId="tourTractor3" fuelFillLevel="290"  attacherJointComboDir="-1" dirtAmount="0.5">
+       <component1 position="114.9800491333 148.14358520508 67.999481201172" rotation="-1.566746711731 1.5617927312851 -1.5875200033188" />
+    </vehicle>
+    <vehicle id="9" filename="data/vehicles/tools/poettinger/poettingerVitasem302A.xml" isAbsolute="true" tourId="tourSowingMachine" fillLevel="0" fillType="unknown" selectedSeedFruitType="wheat" foldAnimTime="0" dirtAmount="0.5">
+       <component1 position="111.54354858398 148.01824951172 67.93726348877" rotation="-0.27022504806519 1.5310246944427 -0.27015206217766" />
+    </vehicle>
+    <vehicle id="10" filename="data/vehicles/tools/suer/suerSB700.xml" isAbsolute="true" dirtAmount="0.60000002384186">
+       <component1 position="118.06343841553 148.353515625 67.99488067627" rotation="-1.5665888786316 1.5617927312851 -1.5873692035675" />
+    </vehicle>
+    <vehicle id="11" filename="data/vehicles/steerable/huerlimann/huerlimannH488.xml" isAbsolute="true" fuelFillLevel="100"  attacherJointComboDir="-1" dirtAmount="0.5">
+       <component1 position="-258.99584960938 100.08531951904 -198.00146484375" rotation="0.015138320624828 0.86888957023621 0.017882395535707" />
+    </vehicle>
+    <vehicle id="12" filename="data/vehicles/tools/kuhn/kuhnVariMaster153.xml" isAbsolute="true" foldAnimTime="0" ploughRotationMax="false" ploughTurnAnimTime="0" dirtAmount="0.5">
+       <component1 position="179.00300598145 152.01962280273 142.00624084473" rotation="3.1374359130859 -0.003377771936357 3.1415853500366" />
+    </vehicle>
+    <vehicle id="13" filename="data/vehicles/tools/suer/suerSB700.xml" isAbsolute="true" dirtAmount="0.5">
+       <component1 position="179.1198425293 151.99993896484 114.01377105713" rotation="3.1415848731995 0.1016253978014 3.1415772438049" />
+    </vehicle>
+    <attachment id0="5" id1="7" inputJointDescIndex="1" jointIndex="2" moveDown="false"/>
+    <attachment id0="8" id1="10" inputJointDescIndex="1" jointIndex="2" moveDown="false"/>
+    <onCreateLoadedObject id="1" state="0" compactedFillLevel="0" fermentingTime="0" silagePlaneMoveAlpha="0" silagePlaneMoveAlphaMax="1">
+       <movingPlane1 fillLevel="0" />
+       <movingPlane2 fillLevel="0" />
+       <movingPlane3 fillLevel="0" />
+       <movingPlane4 fillLevel="0" />
+       <movingPlane5 fillLevel="0" />
+    </onCreateLoadedObject>
+    <onCreateLoadedObject id="2" liquidManureSiloFillLevel="0" bunkerFillLevel="0"/>
+    <onCreateLoadedObject id="3" state="0" compactedFillLevel="0" fermentingTime="0" silagePlaneMoveAlpha="0" silagePlaneMoveAlphaMax="1">
+       <movingPlane1 fillLevel="0" />
+       <movingPlane2 fillLevel="0" />
+       <movingPlane3 fillLevel="0" />
+       <movingPlane4 fillLevel="0" />
+       <movingPlane5 fillLevel="0" />
+       <movingPlane6 fillLevel="0" />
+       <movingPlane7 fillLevel="0" />
+       <movingPlane8 fillLevel="0" />
+       <movingPlane9 fillLevel="0" />
+       <movingPlane10 fillLevel="0" />
+       <movingPlane11 fillLevel="0" />
+       <movingPlane12 fillLevel="0" />
+       <movingPlane13 fillLevel="0" />
+       <movingPlane14 fillLevel="0" />
+       <movingPlane15 fillLevel="0" />
+    </onCreateLoadedObject>
+    <onCreateLoadedObject id="4" state="0" compactedFillLevel="0" fermentingTime="0" silagePlaneMoveAlpha="0" silagePlaneMoveAlphaMax="1">
+       <movingPlane1 fillLevel="0" />
+       <movingPlane2 fillLevel="0" />
+       <movingPlane3 fillLevel="0" />
+       <movingPlane4 fillLevel="0" />
+       <movingPlane5 fillLevel="0" />
+       <movingPlane6 fillLevel="0" />
+       <movingPlane7 fillLevel="0" />
+       <movingPlane8 fillLevel="0" />
+       <movingPlane9 fillLevel="0" />
+       <movingPlane10 fillLevel="0" />
+       <movingPlane11 fillLevel="0" />
+       <movingPlane12 fillLevel="0" />
+       <movingPlane13 fillLevel="0" />
+       <movingPlane14 fillLevel="0" />
+       <movingPlane15 fillLevel="0" />
+    </onCreateLoadedObject>
+    <onCreateLoadedObject id="5" state="0" compactedFillLevel="0" fermentingTime="0" silagePlaneMoveAlpha="0" silagePlaneMoveAlphaMax="1">
+       <movingPlane1 fillLevel="0" />
+       <movingPlane2 fillLevel="0" />
+       <movingPlane3 fillLevel="0" />
+       <movingPlane4 fillLevel="0" />
+       <movingPlane5 fillLevel="0" />
+       <movingPlane6 fillLevel="0" />
+       <movingPlane7 fillLevel="0" />
+       <movingPlane8 fillLevel="0" />
+       <movingPlane9 fillLevel="0" />
+       <movingPlane10 fillLevel="0" />
+       <movingPlane11 fillLevel="0" />
+       <movingPlane12 fillLevel="0" />
+       <movingPlane13 fillLevel="0" />
+       <movingPlane14 fillLevel="0" />
+       <movingPlane15 fillLevel="0" />
+    </onCreateLoadedObject>
+    <onCreateLoadedObject id="6" state="0" compactedFillLevel="0" fermentingTime="0" silagePlaneMoveAlpha="0" silagePlaneMoveAlphaMax="1">
+       <movingPlane1 fillLevel="0" />
+       <movingPlane2 fillLevel="0" />
+       <movingPlane3 fillLevel="0" />
+       <movingPlane4 fillLevel="0" />
+       <movingPlane5 fillLevel="0" />
+       <movingPlane6 fillLevel="0" />
+       <movingPlane7 fillLevel="0" />
+       <movingPlane8 fillLevel="0" />
+       <movingPlane9 fillLevel="0" />
+       <movingPlane10 fillLevel="0" />
+       <movingPlane11 fillLevel="0" />
+       <movingPlane12 fillLevel="0" />
+       <movingPlane13 fillLevel="0" />
+       <movingPlane14 fillLevel="0" />
+       <movingPlane15 fillLevel="0" />
+    </onCreateLoadedObject>
+    <onCreateLoadedObject id="7"  numAnimals0="0" numAnimals1="0" liquidManureFillLevel="0" manureHeapFillLevel="0">
+       <tipTriggerFillLevel fillType="silage" tipTriggerIndex="1" fillLevel="0" />
+       <tipTriggerFillLevel fillType="silage" tipTriggerIndex="2" fillLevel="0" />
+       <tipTriggerFillLevel fillType="silage" tipTriggerIndex="3" fillLevel="0" />
+       <tipTriggerFillLevel fillType="forage" tipTriggerIndex="1" fillLevel="0" />
+       <tipTriggerFillLevel fillType="forage" tipTriggerIndex="2" fillLevel="0" />
+       <tipTriggerFillLevel fillType="forage" tipTriggerIndex="3" fillLevel="0" />
+       <tipTriggerFillLevel fillType="wheat_windrow" tipTriggerIndex="4" fillLevel="0" />
+       <tipTriggerFillLevel fillType="wheat_windrow" tipTriggerIndex="5" fillLevel="0" />
+       <tipTriggerFillLevel fillType="grass_windrow" tipTriggerIndex="1" fillLevel="0" />
+       <tipTriggerFillLevel fillType="grass_windrow" tipTriggerIndex="2" fillLevel="0" />
+       <tipTriggerFillLevel fillType="grass_windrow" tipTriggerIndex="3" fillLevel="0" />
+       <fillLevelMilk fillLevel="0" />
+    </onCreateLoadedObject>
+    <onCreateLoadedObject id="8"  numAnimals0="0" numAnimals1="0">
+       <tipTriggerFillLevel fillType="forage" tipTriggerIndex="1" fillLevel="0" />
+    </onCreateLoadedObject>
+    <onCreateLoadedObject id="9"  numAnimals0="0" numAnimals1="1" numActivePickupObjects="0"/>
+    <onCreateLoadedObject id="10" isTrainStarted="nil" currentTime="0.15464267796964" direction="1">
+       <vehicle1 fillLevels="" />
+       <vehicle2 fillLevels="" />
+       <vehicle3 fillLevels="0" />
+       <wood fillLevel="0" />
+    </onCreateLoadedObject>
+    <onCreateLoadedObject id="11" isTrainStarted="nil" currentTime="0.10972885647158" direction="1">
+       <vehicle1 fillLevels="" />
+       <vehicle2 fillLevels="0 0 0 0" />
+       <vehicle3 fillLevels="0" />
+       <wood fillLevel="0" />
+    </onCreateLoadedObject>
+</careerVehicles>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<gameSettings revision="9" timescale="16">
+    <autohelp>true</autohelp>
+    <traffic density="1" spawnInterval="1000" />
+    <nickname></nickname>
+    <careerStart active="false" savegame="1" />
+    <modsDirectoryOverride active="false" directory="C:/Temp" />
+    <defaultMultiplayerPort></defaultMultiplayerPort>
+    <tyreTracks maxTrackSegmentsScale="1" />
+</gameSettings>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<ShaderCache>
+  <ShaderCode type="asm">
+<![CDATA[!!ARBfp1.0
+# cgc version 2.1.0017, build date Feb 17 2009
+# command line args: -q -profile arbfp1 -entry main_fp MaxLocalParams=256
+#vendor NVIDIA Corporation
+#version 2.1.0.17
+#profile arbfp1
+#program main_fp
+#semantic main_fp.In
+#var float4 In.vs.texCoords[0] : $vin.TEX0 : TEX0 : 0 : 1
+#var float3 In.vs.lightVectors[0] : $vin.TEX1 : TEX1 : 0 : 1
+#var float3 In.vs.dirLightVectors[0] : $vin.TEX2 : TEX2 : 0 : 1
+#var float3 In.vs.spotLightDirections[0] : $vin.TEX3 : TEX3 : 0 : 1
+#var float3 In.vs.vertToEyeVector : $vin.TEX4 : TEX4 : 0 : 1
+#var float In.vs.fogFactor : $vin.TEX5 : TEX5 : 0 : 1
+#var sampler2D In.samplers.baseMap : TEXUNIT0 : texunit 0 : 0 : 1
+#var sampler2D In.samplers.normalMap : TEXUNIT1 : texunit 1 : 0 : 1
+#var sampler2D In.samplers.glossMap : TEXUNIT2 : texunit 2 : 0 : 1
+#var float4 In.lights.dirLightDirections[0] :  :  : 0 : 0
+#var float4 In.lights.dirLightPositions[0] :  :  : 0 : 0
+#var float4 In.lights.spotLightPositions[0] :  :  : 0 : 0
+#var float4 In.lights.spotLightDirections[0] :  :  : 0 : 0
+#var float4 In.lights.spotLightConeParams[0] :  : c[0] : 0 : 1
+#var float4 In.lights.diffuseColors[0] :  : c[1] : 0 : 1
+#var float4 In.lights.diffuseColors[1] :  : c[2] : 0 : 1
+#var float4 In.lights.specularColors[0] :  : c[3] : 0 : 1
+#var float4 In.lights.specularColors[1] :  : c[4] : 0 : 1
+#var float4 In.lights.ambientColor :  : c[5] : 0 : 1
+#var float4 In.lights.hackyAlwaysFillVar :  :  : 0 : 0
+#var float4 In.mat.cosPower_EmissiveCoeff_ScaleBias :  : c[6] : 0 : 1
+#var float4 In.mat.depthBias_Opacity :  :  : 0 : 0
+#var float4 In.mat.reflectionRefractionCoeffScale :  :  : 0 : 0
+#var float4 In.fogColor :  : c[7] : 0 : 1
+#var float4x4 In.modelViewProjMatrix :  : , 4 : 0 : 0
+#var float4 In.cameraPosition :  :  : 0 : 0
+#var float4 In.modelCameraPosition :  :  : 0 : 0
+#var float3x4 In.modelMatrix :  : , 3 : 0 : 0
+#var float3x4 In.modelViewMatrix :  : , 3 : 0 : 0
+#var float3x4 In.viewMatrix :  : , 3 : 0 : 0
+#var float4 In.time :  :  : 0 : 0
+#var float4 main_fp : $vout.COLOR : COL : -1 : 1
+#const c[8] = 2 1 0 0.1
+#const c[9] = 0.89999998 3
+PARAM c[10] = { program.local[0..7],
+		{ 2, 1, 0, 0.1 },
+		{ 0.89999998, 3 } };
+TEMP R0;
+TEMP R1;
+TEMP R2;
+TEMP R3;
+TEMP R4;
+DP3 R0.w, fragment.texcoord[1], fragment.texcoord[1];
+RSQ R1.y, R0.w;
+DP3 R2.w, fragment.texcoord[3], fragment.texcoord[3];
+RSQ R3.w, R2.w;
+TEX R0.xyz, fragment.texcoord[0], texture[1], 2D;
+MAD R0.xyz, R0, c[8].x, -c[8].y;
+DP3 R1.x, R0, R0;
+RSQ R1.w, R1.x;
+ADD_SAT R0.w, -R0, c[8].y;
+MUL R2.xyz, R1.w, R0;
+MUL R1.xyz, R1.y, fragment.texcoord[1];
+DP3 R0.x, R2, R1;
+MUL R4.xyz, R3.w, fragment.texcoord[3];
+DP3 R3.w, -R1, R4;
+MAD R0.y, R0.x, c[8].w, c[8].w;
+CMP R0.z, R0.x, R0.y, R0.x;
+MUL R0.y, R0.z, c[9].x;
+SLT R0.x, R0, c[8].z;
+ADD R4.w, c[0].x, -c[0].y;
+ADD R1.w, R0.y, c[8];
+ABS R0.x, R0;
+CMP R0.y, -R0.x, c[8].z, c[8];
+CMP R0.y, -R0, R1.w, R0.z;
+DP3 R0.x, fragment.texcoord[2], fragment.texcoord[2];
+MUL R3.xyz, R0.y, c[2];
+RSQ R0.x, R0.x;
+MUL R0.xyz, R0.x, fragment.texcoord[2];
+DP3 R1.w, R0, R2;
+MAD R2.w, R1, c[8], c[8];
+CMP R2.w, R1, R2, R1;
+RCP R4.x, R4.w;
+ADD R3.w, R3, -c[0].y;
+MUL_SAT R3.w, R3, R4.x;
+MUL R4.x, -R3.w, c[8];
+ADD R4.x, R4, c[9].y;
+MUL R3.w, R3, R3;
+MUL R3.w, R3, R4.x;
+SLT R1.w, R1, c[8].z;
+ABS R4.x, R1.w;
+MUL R0.w, R0, R0;
+MUL R0.w, R0, R3;
+MUL R3.w, R2, c[9].x;
+DP3 R4.y, fragment.texcoord[4], fragment.texcoord[4];
+RSQ R1.w, R4.y;
+MUL R3.xyz, R3, R0.w;
+MAD R1.xyz, R1.w, fragment.texcoord[4], R1;
+MAD R0.xyz, R1.w, fragment.texcoord[4], R0;
+ADD R3.w, R3, c[8];
+CMP R4.x, -R4, c[8].z, c[8].y;
+CMP R2.w, -R4.x, R3, R2;
+DP3 R3.w, R1, R1;
+MAD R3.xyz, R2.w, c[1], R3;
+RSQ R2.w, R3.w;
+MUL R1.xyz, R2.w, R1;
+DP3_SAT R1.y, R2, R1;
+DP3 R1.w, R0, R0;
+RSQ R1.x, R1.w;
+MUL R0.xyz, R1.x, R0;
+POW R1.y, R1.y, c[6].x;
+MUL R1.xyz, R1.y, c[4];
+DP3_SAT R0.x, R2, R0;
+MUL R1.xyz, R0.w, R1;
+POW R0.w, R0.x, c[6].x;
+TEX R0.xyz, fragment.texcoord[0], texture[2], 2D;
+MAD R1.xyz, R0.w, c[3], R1;
+MUL R1.xyz, R1, R0;
+TEX R0.xyz, fragment.texcoord[0], texture[0], 2D;
+MAD R1.xyz, R0, R3, R1;
+MAD R0.xyz, R0, c[5], R1;
+ADD R0.xyz, R0, -c[7];
+MAD result.color.xyz, fragment.texcoord[5].x, R0, c[7];
+MOV result.color.w, c[8].y;
+END
+# 72 instructions, 5 R-regs
+]]>
+  </ShaderCode>
+
+  <Parameters>
+    <Parameter name="In.fogColor" index="7"/>
+    <Parameter name="In.lights.ambientColor" index="5"/>
+    <Parameter name="In.lights.spotLightConeParams[0]" index="0"/>
+    <Parameter name="In.mat.cosPower_EmissiveCoeff_ScaleBias" index="6"/>
+    <Parameter name="In.lights.diffuseColors[0]" index="1"/>
+    <Parameter name="In.lights.diffuseColors[1]" index="2"/>
+    <Parameter name="In.lights.specularColors[0]" index="3"/>
+    <Parameter name="In.lights.specularColors[1]" index="4"/>
+  </Parameters>
+
+  <Samplers>
+    <Sampler name="In.samplers.baseMap"/>
+    <Sampler name="In.samplers.normalMap"/>
+    <Sampler name="In.samplers.glossMap"/>
+  </Samplers>
+
+</ShaderCache>

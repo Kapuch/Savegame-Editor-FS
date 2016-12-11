@@ -1,0 +1,64 @@
+GIANTS Engine Runtime 6.0.0 64bit (Build Date: Oct 16 2014)
+Copyright (c) 2008-2014, GIANTS Software GmbH (giants-software.com), All Rights Reserved.
+Copyright (c) 2003-2014, Christian Ammann and Stefan Geiger, All Rights Reserved.
+Application: FarmingSimulator2015
+Main System
+  CPU: Intel(R) Core(TM) i7-3632QM CPU @ 2.20GHz
+  Memory: 16199 MB
+  OS: Windows NT 6.2 64-bit
+Physics System
+  Version: 5.9.4
+  Thread(s): 2
+Input System
+  Keyboard enabled
+  Mouse enabled
+  Gamepad/Joystick disabled
+  Force Feedback disabled
+Sound System
+  Driver: OpenAL
+  Version: 1.1
+  Device:  Generic Software
+  Max. sources: 256
+Render System
+  Driver: OpenGL
+  Card Vendor: NVIDIA Corporation
+  Renderer: GeForce GT 730M/PCIe/SSE2
+  Version: 4.5.0 NVIDIA 372.54
+    max_texture_layers: 16
+    OpenGL initialization successful
+Hardware Profile
+  Level: Medium (auto)
+  View Distance Factor: 1.000000
+  Shadow Quality: 1.000000
+  Skip Mipmaps: 1
+  LOD Distance Factor: 1.000000
+  Terrain LOD Distance Factor: 1.000000
+  Foliage View Distance Factor: 1.000000
+  Volume Mesh Tessellation Factor: 1.000000
+  Tyre Tracks Segments Factor: 1.000000
+Farming Simulator 15
+  Version: 1.0.1.0 RC10
+  Available Languages: pl
+  Language: pl
+Game vehicle types loaded
+Mod directory: C:/Users/Patryk/Documents/My Games/FarmingSimulator2015/mods/
+data/sky/sky_day_night.i3d (245.50 ms)
+data/sky/rain.i3d (39.25 ms)
+data/sky/hail.i3d (26.49 ms)
+data/sky/dust.i3d (25.38 ms)
+data/maps/map01.i3d (19290.21 ms)
+data/vehicles/steerable/sampoRosenlew/sampoRosenlewC6.i3d (651.34 ms)
+dataS2/character/player/player.i3d (906.84 ms)
+data/vehicles/cutters/sampoRosenlew/sampoRosenlewC6.i3d (204.47 ms)
+data/vehicles/steerable/huerlimann/huerlimannH488.i3d (444.99 ms)
+data/vehicles/trailers/brantner/brantnerE8041.i3d (128.62 ms)
+data/vehicles/steerable/deutz/deutzAgroStar661.i3d (409.84 ms)
+data/vehicles/tools/koeckerling/koeckerlingTrio300M.i3d (220.83 ms)
+data/vehicles/particleAnimations/koeckerling/koeckerlingTrio300M.i3d (138.06 ms)
+data/vehicles/tools/suer/suerSB1000.i3d (76.33 ms)
+data/vehicles/tools/poettinger/poettingerVitasem302A.i3d (288.47 ms)
+data/vehicles/particleAnimations/poettinger/poettingerVitasem302A.i3d (37.68 ms)
+data/vehicles/tools/suer/suerSB700.i3d (16.69 ms)
+data/vehicles/tools/kuhn/kuhnVariMaster153.i3d (219.73 ms)
+data/vehicles/particleAnimations/kuhn/kuhnVariMaster153.i3d (29.82 ms)
+dataS/character/player/playerCCT.i3d (12.33 ms)

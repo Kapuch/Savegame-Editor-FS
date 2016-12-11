@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<economy>
+  <vehicleShopSales>
+    <vehicleShopSale xmlFilename="data/vehicles/trailers/strautmann/strautmannTeraVitesse5201.xml" discount="5" saleStartDay="6" saleStartHour="9" saleDuration="18" isRunning="false" />
+    <vehicleShopSale xmlFilename="data/vehicles/tools/kuhn/kuhnFC3525F.xml" discount="20" saleStartDay="3" saleStartHour="8" saleDuration="48" isRunning="false" />
+    <vehicleShopSale xmlFilename="data/vehicles/cutters/capello/capelloQuasarHS16.xml" discount="5" saleStartDay="5" saleStartHour="11" saleDuration="12" isRunning="false" />
+    <vehicleShopSale xmlFilename="data/vehicles/wheelLoaders/lizard/wheelLoaderLogFork.xml" discount="15" saleStartDay="6" saleStartHour="12" saleDuration="30" isRunning="false" />
+  </vehicleShopSales>
+  <brandSale xmlFilename="data/vehicles/tools/lemken/lemkenHeliodorGigant101200.xml" discount="15" saleStartDay="8" saleStartHour="11" saleDuration="6" isRunning="false" />
+  <fieldOwnage>
+    <field number="1" ownedByPlayer="False" />
+    <field number="2" ownedByPlayer="False" />
+    <field number="3" ownedByPlayer="True" />
+    <field number="4" ownedByPlayer="False" />
+    <field number="5" ownedByPlayer="True" />
+    <field number="6" ownedByPlayer="False" />
+    <field number="7" ownedByPlayer="True" />
+    <field number="8" ownedByPlayer="True" />
+    <field number="9" ownedByPlayer="True" />
+    <field number="10" ownedByPlayer="True" />
+    <field number="11" ownedByPlayer="True" />
+    <field number="12" ownedByPlayer="True" />
+    <field number="13" ownedByPlayer="True" />
+    <field number="14" ownedByPlayer="True" />
+    <field number="15" ownedByPlayer="True" />
+    <field number="16" ownedByPlayer="True" />
+    <field number="17" ownedByPlayer="True" />
+    <field number="18" ownedByPlayer="True" />
+    <field number="19" ownedByPlayer="True" />
+    <field number="20" ownedByPlayer="True" />
+    <field number="21" ownedByPlayer="True" />
+    <field number="22" ownedByPlayer="True" />
+    <field number="23" ownedByPlayer="True" />
+    <field number="24" ownedByPlayer="True" />
+    <field number="25" ownedByPlayer="True" />
+    <field number="26" ownedByPlayer="True" />
+    <field number="27" ownedByPlayer="True" />
+    <field number="28" ownedByPlayer="True" />
+    <field number="29" ownedByPlayer="True" />
+    <field number="30" ownedByPlayer="True" />
+    <field number="31" ownedByPlayer="True" />
+    <field number="32" ownedByPlayer="True" />
+    <field number="33" ownedByPlayer="True" />
+    <field number="34" ownedByPlayer="True" />
+    <field number="35" ownedByPlayer="False" />
+    <field number="36" ownedByPlayer="True" />
+    <field number="37" ownedByPlayer="True" />
+    <field number="38" ownedByPlayer="False" />
+    <field number="39" ownedByPlayer="True" />
+    <field number="40" ownedByPlayer="False" />
+    <field number="41" ownedByPlayer="True" />
+  </fieldOwnage>
+  <greatDemands>
+    <greatDemand stationName="StationShippingOffice" fillTypeName="rape" demandMultiplier="2" demandStartDay="3" demandStartHour="8" demandDuration="18" isRunning="false" isValid="true" />
+    <greatDemand stationName="StationWindmill" fillTypeName="wheat" demandMultiplier="1.5" demandStartDay="4" demandStartHour="8" demandDuration="18" isRunning="false" isValid="true" />
+    <greatDemand stationName="StationShippingOffice" fillTypeName="potato" demandMultiplier="1.7" demandStartDay="6" demandStartHour="18" demandDuration="18" isRunning="false" isValid="true" />
+  </greatDemands>
+  <financeStatsHistory>
+    <financeStats day="0" newVehiclesCost="0" newAnimalsCost="0" constructionCost="0" vehicleRunningCost="0" propertyMaintenance="0" wagePayment="0" harvestIncome="0" missionIncome="0" other="0" loanInterest="0" />
+  </financeStatsHistory>
+</economy>

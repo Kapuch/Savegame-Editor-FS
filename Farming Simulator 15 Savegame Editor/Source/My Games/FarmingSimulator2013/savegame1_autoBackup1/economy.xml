@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<economy>
+    <vehicleShopSales>
+      <vehicleShopSale xmlFilename="data/vehicles/balers/kroneComprimaV180.xml" discount="25" saleStartDay="4" saleStartHour="15" saleDuration="6" isRunning="false" />
+      <vehicleShopSale xmlFilename="data/vehicles/tools/amazone/amazoneAD-P303Super.xml" discount="15" saleStartDay="3" saleStartHour="8" saleDuration="30" isRunning="false" />
+      <vehicleShopSale xmlFilename="data/vehicles/trailers/krone/kroneZX550GD.xml" discount="20" saleStartDay="5" saleStartHour="10" saleDuration="48" isRunning="false" />
+      <vehicleShopSale xmlFilename="data/vehicles/steerable/deutz/deutz7545RTS.xml" discount="30" saleStartDay="5" saleStartHour="8" saleDuration="12" isRunning="false" />
+    </vehicleShopSales>
+
+    <brandSale xmlFilename="data/vehicles/trailers/kroeger/MUK303.xml" discount="15" saleStartDay="6" saleStartHour="13" saleDuration="24" isRunning="false" />
+
+    <auctionBidders>
+      <auctionBidder id="1">
+        <bidTime hour="20" minute="48" />
+      </auctionBidder>
+      <auctionBidder id="2">
+      </auctionBidder>
+      <auctionBidder id="3">
+      </auctionBidder>
+      <auctionBidder id="4">
+      </auctionBidder>
+      <auctionBidder id="5">
+      </auctionBidder>
+      <auctionBidder id="6">
+        <bidTime hour="18" minute="30" />
+        <bidTime hour="20" minute="41" />
+        <bidTime hour="19" minute="20" />
+        <bidTime hour="17" minute="14" />
+      </auctionBidder>
+    </auctionBidders>
+
+    <auction auctionFieldNumber="33" auctionStartDay="7" auctionStartHour="11" auctionDuration="11" isRunning="false" isValid="true" />
+
+    <fieldOwnage>
+      <field number="1" ownedByPlayer="false" />
+      <field number="2" ownedByPlayer="false" />
+      <field number="3" ownedByPlayer="false" />
+      <field number="4" ownedByPlayer="false" />
+      <field number="5" ownedByPlayer="false" />
+      <field number="6" ownedByPlayer="false" />
+      <field number="7" ownedByPlayer="false" />
+      <field number="8" ownedByPlayer="false" />
+      <field number="9" ownedByPlayer="false" />
+      <field number="10" ownedByPlayer="false" />
+      <field number="11" ownedByPlayer="false" />
+      <field number="12" ownedByPlayer="false" />
+      <field number="13" ownedByPlayer="false" />
+      <field number="14" ownedByPlayer="false" />
+      <field number="15" ownedByPlayer="false" />
+      <field number="16" ownedByPlayer="true" />
+      <field number="17" ownedByPlayer="false" />
+      <field number="18" ownedByPlayer="false" />
+      <field number="19" ownedByPlayer="false" />
+      <field number="20" ownedByPlayer="false" />
+      <field number="21" ownedByPlayer="false" />
+      <field number="22" ownedByPlayer="false" />
+      <field number="23" ownedByPlayer="false" />
+      <field number="24" ownedByPlayer="false" />
+      <field number="25" ownedByPlayer="false" />
+      <field number="26" ownedByPlayer="false" />
+      <field number="27" ownedByPlayer="false" />
+      <field number="28" ownedByPlayer="false" />
+      <field number="29" ownedByPlayer="false" />
+      <field number="30" ownedByPlayer="false" />
+      <field number="31" ownedByPlayer="false" />
+      <field number="32" ownedByPlayer="false" />
+      <field number="33" ownedByPlayer="false" />
+      <field number="34" ownedByPlayer="false" />
+      <field number="35" ownedByPlayer="false" />
+      <field number="36" ownedByPlayer="false" />
+      <field number="37" ownedByPlayer="false" />
+      <field number="38" ownedByPlayer="false" />
+      <field number="39" ownedByPlayer="false" />
+      <field number="40" ownedByPlayer="false" />
+      <field number="41" ownedByPlayer="false" />
+      <field number="42" ownedByPlayer="false" />
+    </fieldOwnage>
+
+    <greatDemands>
+      <greatDemand stationName="StationFarmShop" fillTypeIndex="3" demandMultiplier="2" demandStartDay="6" demandStartHour="13" demandDuration="12" isRunning="false" isValid="true" />
+      <greatDemand stationName="StationInn" fillTypeIndex="1" demandMultiplier="1.5" demandStartDay="6" demandStartHour="13" demandDuration="18" isRunning="false" isValid="true" />
+      <greatDemand stationName="StationInn" fillTypeIndex="3" demandMultiplier="1.5" demandStartDay="5" demandStartHour="7" demandDuration="6" isRunning="false" isValid="true" />
+    </greatDemands>
+
+    <financeStatsHistory>
+        <financeStats day="0" newVehiclesCost="0" newAnimalsCost="0" constructionCost="0" vehicleRunningCost="-2.2118055555556" propertyMaintenance="0" wagePayment="0" harvestIncome="0" missionIncome="0" other="0" loanInterest="0" />
+    </financeStatsHistory>
+
+</economy>
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<careerVehicles>
+    <vehicle filename="data/vehicles/cutters/lizard/lizard58Cutter.xml" isAbsolute="true">
+       <component1 position="-30.001991271973 82.282318115234 -329.93835449219" rotation="0.2729520201683 -0.0016327582998201 0.0006832365761511" />
+    </vehicle>
+    <vehicle filename="data/vehicles/trailers/smallTipper.xml" isAbsolute="true" fillLevel="0" fillType="unknown">
+       <component1 position="-15.000241279602 82.134956359863 -302.99975585938" rotation="-3.1392433643341 -0.00035511518944986 3.1414229869843" />
+       <component2 position="-15.00226688385 82.128028869629 -306.42864990234" rotation="-3.1413362026215 -0.00074316118843853 3.1393227577209" />
+    </vehicle>
+    <vehicle filename="data/vehicles/tools/cultivator01.xml" isAbsolute="true">
+       <component1 position="-19.999988555908 82.118919372559 -303.00003051758" rotation="-3.1414675712585 2.5544700292812e-006 3.1415910720825" />
+    </vehicle>
+    <vehicle filename="data/vehicles/tools/sowingMachine01.xml" isAbsolute="true" fillLevel="0" fillType="unknown" selectedSeedFruitType="wheat">
+       <component1 position="-24.999864578247 82.017356872559 -303.02606201172" rotation="2.7839601039886 -0.00023621699074283 -3.141585111618" />
+    </vehicle>
+    <vehicle filename="data/vehicles/tools/plough01.xml" isAbsolute="true">
+       <component1 position="-30.000047683716 82.09220123291 -302.99996948242" rotation="3.1412093639374 7.3782095569186e-005 3.1412715911865" />
+    </vehicle>
+    <vehicle filename="data/vehicles/tools/triton200.xml" isAbsolute="true" fillLevel="0" fillType="unknown">
+       <component1 position="-34.999965667725 82.15047454834 -303" rotation="-3.1415920257568 1.443909354748e-006 3.1396465301514" />
+    </vehicle>
+    <vehicle filename="data/vehicles/cutters/lizard/lizardCutter7210.xml" isAbsolute="true">
+       <component1 position="145.54756164551 86.533935546875 629.03155517578" rotation="0.17091326415539 0.020911393687129 -0.062610648572445" />
+    </vehicle>
+</careerVehicles>

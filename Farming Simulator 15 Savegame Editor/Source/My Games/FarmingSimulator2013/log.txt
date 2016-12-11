@@ -1,0 +1,69 @@
+GIANTS Engine Runtime 5.0.1 (build date: Oct  5 2012)
+Copyright (c) 2008-2012, GIANTS Software GmbH (www.giants-software.com), All Rights Reserved.
+Copyright (c) 2003-2012, Christian Ammann and Stefan Geiger, All Rights Reserved.
+Application: FarmingSimulator2013
+Main System
+  Core(s): 8 @ 2.2 GHZ
+  OS: Windows NT 6.2 64-bit
+Physics System
+  Driver: NVIDIA PhysX Runtime
+  Version: 2.8.3
+  Thread(s): 2
+Input System
+  Keyboard enabled
+  Mouse enabled
+  Gamepad/Joystick disabled
+  Force Feedback disabled
+Sound System
+  Driver: OpenAL
+  Version: 1.1
+  Device:  Generic Software
+  Max. sources: 256
+Render System
+  Driver: OpenGL
+  Card Vendor: NVIDIA Corporation
+  Renderer: GeForce GT 730M/PCIe/SSE2
+  Version: 4.5.0 NVIDIA 372.54
+    max_texture_layers: 8
+  OpenGL initialization successful
+Hardware Profile
+  Level: Medium (auto)
+  View Distance Coeff: 1.000000
+  Shadow Quality: 1.000000
+  Skip Mipmaps: 1
+  LOD Distance Coeff: 1.000000
+  Terrain LOD Distance Coeff: 1.000000
+  Foliage View Distance Coeff: 1.000000
+Farming Simulator 2013
+  Version: 1.1.1.0 RC3
+  Available Languages: pl
+  Language: pl
+Game vehicle types loaded
+Mod directory: C:/Users/Patryk/Documents/My Games/FarmingSimulator2013/mods
+data/sky/sky_day_night.i3d (0.00mb in 9.85 ms)
+data/sky/rain.i3d (0.00mb in 1.88 ms)
+data/sky/hail.i3d (0.00mb in 1.46 ms)
+data/maps/map01.i3d (49.20mb in 4522.63 ms)
+dataS2/character/pedestrians/executive03.i3d (0.27mb in 24.63 ms)
+dataS2/character/pedestrians/casual07.i3d (0.32mb in 30.75 ms)
+dataS2/character/pedestrians/casual02.i3d (0.31mb in 29.41 ms)
+dataS2/character/pedestrians/casual08.i3d (0.53mb in 45.36 ms)
+dataS2/character/pedestrians/casual03.i3d (0.33mb in 29.56 ms)
+dataS2/character/pedestrians/casual15.i3d (0.40mb in 38.42 ms)
+data/vehicles/steerable/same/sameArgon3-75.i3d (4.50mb in 108.05 ms)
+data/vehicles/steerable/powerTakeoff.i3d (0.02mb in 1.68 ms)
+data/vehicles/steerable/upperLinkMedium.i3d (0.04mb in 3.22 ms)
+data/vehicles/steerable/upperLinkSmall.i3d (0.04mb in 1.55 ms)
+data/vehicles/steerable/kramer/kramerKL200.i3d (2.31mb in 51.65 ms)
+data/vehicles/steerable/buehrer/buehrer6135A.i3d (3.70mb in 74.67 ms)
+data/vehicles/steerable/fahr/fahrM66.i3d (2.95mb in 63.34 ms)
+data/vehicles/tools/poettinger/poettingerServo35.i3d (1.27mb in 25.45 ms)
+data/vehicles/tools/lemken/lemkenKristall9.i3d (0.75mb in 19.11 ms)
+data/vehicles/tools/amazone/amazoneD1.i3d (1.08mb in 21.85 ms)
+data/vehicles/trailers/krone/kroneEmsland.i3d (1.11mb in 56.26 ms)
+data/vehicles/steerable/fahr/fahrM66Cutter.i3d (1.10mb in 18.69 ms)
+data/vehicles/tools/extraWeight01.i3d (0.07mb in 3.05 ms)
+data/vehicles/steerable/lizard/golfCart.i3d (0.89mb in 81.08 ms)
+data/character/farmer/farmer_player.i3d (1.75mb in 41.59 ms)
+data/vehicles/trucks/milktruck.i3d (1.19mb in 114.55 ms)
+data/vehicles/cars/car5.i3d (0.37mb in 23.11 ms)

@@ -1,16 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Farming_Simulator_15_Savegame_Editor
 {
@@ -22,16 +11,16 @@ namespace Farming_Simulator_15_Savegame_Editor
         public FieldManageWindow(string path)
         {
             InitializeComponent();
-            Economy.Load(path, this, pola);
+            Economy.Load(path, this, pola); //tak jak w MainWindow Savegame.Load
             this.path = path;
 
         }
         private string path;
-        private List<Field> pola = new List<Field>();
+        private List<Field> pola = new List<Field>(); // lista pol ktora jest aktualizowana wraz ze zmiana w kontrolce dataGrid dzieki trybowi TwoWay
 
         private void saveButton_Click(object sender, RoutedEventArgs e)
         {
-            Economy.Save(path, this, pola);
+            Economy.Save(path, this, pola); //tak jak w MainWindow Savegame.Save
             Close();
         }
 

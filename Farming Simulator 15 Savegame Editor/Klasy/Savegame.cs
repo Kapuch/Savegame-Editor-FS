@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
-using System.Text.RegularExpressions;
 
 namespace Farming_Simulator_15_Savegame_Editor
 {
@@ -19,22 +15,22 @@ namespace Farming_Simulator_15_Savegame_Editor
             {
                 foreach (var box in allBox)
                 {
-                    box.IsEnabled = false;
-                    box.Clear();
+                    box.IsEnabled = false; //wylacza wszystkie kontrolki textbox
+                    box.Clear(); //przed zaladowaniem wartosci czysci wczesniej załadowane
                 }
-                XmlDocument Xcareer = new XmlDocument();
+                XmlDocument Xcareer = new XmlDocument(); //przechowuje zawartosc XML
                 try
                 {
                     Xcareer.Load(patch);
-                    XmlNodeList XNodeSilo = Xcareer.GetElementsByTagName("farmSiloAmount");
+                    XmlNodeList XNodeSilo = Xcareer.GetElementsByTagName("farmSiloAmount"); //tworzymy liste wezlow zawartych w wezle farmSiloAmount
                     foreach (XmlNode silo in XNodeSilo)
                     {
                         #region wprowadzanie wartosci w odpowiednie textBoxy
                         switch (silo.Attributes["fillType"].Value)
                         {
                             case "potato":
-                                control.potatoBox.Text = Format.GiveMeDigits(silo.Attributes["amount"].Value);
-                                control.potatoBox.IsEnabled = true;
+                                control.potatoBox.Text = Format.GiveMeDigits(silo.Attributes["amount"].Value); //dla wezla o atrybucie filltype przypisz dla kontroli textbox wartosc atrybutu amount znajdujacego sie na tym samym poziomie
+                                control.potatoBox.IsEnabled = true; //wlaczenie kontrolki
                                 break;
                             case "rape":
                                 control.rapeBox.Text = Format.GiveMeDigits(silo.Attributes["amount"].Value);
@@ -93,18 +89,18 @@ namespace Farming_Simulator_15_Savegame_Editor
         {
             if (File.Exists(path))
             {
-                XmlDocument Xcareer = new XmlDocument();
+                XmlDocument Xcareer = new XmlDocument(); //przechowuje zawartosc dokumentu XML
                 try
                 {
                     Xcareer.Load(path);
-                    XmlNodeList XNodeSilo = Xcareer.GetElementsByTagName("farmSiloAmount");
+                    XmlNodeList XNodeSilo = Xcareer.GetElementsByTagName("farmSiloAmount"); //tworzymy liste wezlow zawartych w wezle farmSiloAmount
                     foreach (XmlNode silo in XNodeSilo)
                     {
                         #region wyprowadzenie wartosci z odpowiednich textBoxów
                         switch (silo.Attributes["fillType"].Value)
                         {
                             case "potato":
-                                silo.Attributes["amount"].Value = control.potatoBox.Text;
+                                silo.Attributes["amount"].Value = control.potatoBox.Text; //dla wezla o atrybucie filltype przypisz dla atrybutu amount znajdujacego sie na tym samym poziomie wartosc kontrolki textbox
                                 break;
                             case "rape":
                                 silo.Attributes["amount"].Value = control.rapeBox.Text;
@@ -139,8 +135,8 @@ namespace Farming_Simulator_15_Savegame_Editor
                         }
                         #endregion
                     }
-                    XmlNode myNode = Xcareer.SelectSingleNode("/careerSavegame");
-                    myNode.Attributes["money"].Value = control.moneyBox.Text;
+                    XmlNode myNode = Xcareer.SelectSingleNode("/careerSavegame"); //wybor pojedynczego wezla
+                    myNode.Attributes["money"].Value = control.moneyBox.Text; //zmiana wartosci atrybutu money
                     Xcareer.Save(path);
                     MessageBox.Show("Zapisano.");
                 }

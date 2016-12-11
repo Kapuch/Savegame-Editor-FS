@@ -1,19 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 using System.Windows;
-using System.Windows.Controls;
 using Microsoft.Win32; //OpenFileDialog
 
 
 namespace Farming_Simulator_15_Savegame_Editor
 {
-   public class FileSelection
+    public class FileSelection
     {
-        private static string mainPatch = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\My Games\";
+        private static string mainPatch = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\My Games\"; //uzuskujemy lokalizacje systemowego folderu Dokumenty (nazwa uzytkownika zmienia ta wartosc)
         /// <summary>wyszukukuje katalogi gier w Dokumentach</summary>
         ///<param name="control">Parametr przyjmuje klasę w której znajdują się kontrolki (this)</param>
         public static void dirAutoSearch(MainWindow control)
@@ -21,9 +16,9 @@ namespace Farming_Simulator_15_Savegame_Editor
             control.DIRcomboBox.Items.Clear();
             control.DIRcomboBox.Items.Add("Wybierz ręcznie");
             for (int i = 2011; i <= 2015; i += 2) // tylko wersja 2015 i wcześniejsze ze względu na zmiany wprowadzone w wersji 2017
-                if (Directory.Exists(mainPatch + @"farmingsimulator" + i))
+                if (Directory.Exists(mainPatch + @"farmingsimulator" + i)) //czy sciezka istnieje
                 {
-                    control.DIRcomboBox.Items.Add("FarmingSimulator" + i);
+                    control.DIRcomboBox.Items.Add("FarmingSimulator" + i); //dodaj folder do wyboru w comboBoxie
                 }
             control.DIRcomboBox.SelectedIndex = 0;
         }
@@ -34,10 +29,10 @@ namespace Farming_Simulator_15_Savegame_Editor
             if (control.DIRcomboBox.SelectedIndex != 0)
             {
                 for (int i = 1; i <= 30; i++)
-                    if (Directory.Exists(mainPatch + control.DIRcomboBox.Text + @"\savegame" + i))
+                    if (Directory.Exists(mainPatch + control.DIRcomboBox.Text + @"\savegame" + i)) //identycznie jak w dirAutoSearch
                     {
-                        if(File.Exists(mainPatch + control.DIRcomboBox.Text + @"\savegame" + i + @"\VEHICLES.xml"))
-                        control.SAVEcomboBox.Items.Add("savegame" + i);
+                        if(File.Exists(mainPatch + control.DIRcomboBox.Text + @"\savegame" + i + @"\VEHICLES.xml")) //aby savegame istnialo musi zawierac w sasiedztwie plik vehicles.xml
+                            control.SAVEcomboBox.Items.Add("savegame" + i);
                     }
             }
         }

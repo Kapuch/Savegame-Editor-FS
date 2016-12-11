@@ -109,7 +109,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Source\" />
+    <Resource Include="Source\eco.png" />
+    <Resource Include="Source\editor.png" />
+    <Resource Include="Source\movesilo.png" />
+    <Resource Include="Source\silo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

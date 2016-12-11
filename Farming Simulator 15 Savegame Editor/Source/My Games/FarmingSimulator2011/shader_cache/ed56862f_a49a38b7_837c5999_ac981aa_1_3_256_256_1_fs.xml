@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<ShaderCache>
+  <ShaderCode type="asm">
+<![CDATA[!!ARBfp1.0
+# cgc version 2.1.0017, build date Feb 17 2009
+# command line args: -q -profile arbfp1 -entry main_fp MaxLocalParams=256
+#vendor NVIDIA Corporation
+#version 2.1.0.17
+#profile arbfp1
+#program main_fp
+#semantic main_fp.In
+#var float4 In.vs.texCoords[0] : $vin.TEX0 : TEX0 : 0 : 1
+#var float3 In.vs.normal : $vin.TEX1 : TEX1 : 0 : 0
+#var float4 In.vs.vertexColor : $vin.TEX2 : TEX2 : 0 : 1
+#var sampler2D In.samplers.emissiveMap : TEXUNIT0 : texunit 0 : 0 : 1
+#var float4 In.lights.dirLightDirections[0] :  :  : 0 : 0
+#var float4 In.lights.diffuseColors[0] :  :  : 0 : 0
+#var float4 In.lights.ambientColor :  :  : 0 : 0
+#var float4 In.lights.hackyAlwaysFillVar :  :  : 0 : 0
+#var float4 In.mat.cosPower_EmissiveCoeff_ScaleBias :  : c[0] : 0 : 1
+#var float4 In.mat.depthBias_Opacity :  : c[1] : 0 : 1
+#var float4 In.mat.reflectionRefractionCoeffScale :  :  : 0 : 0
+#var float4x4 In.modelViewProjMatrix :  : , 4 : 0 : 0
+#var float4 In.cameraPosition :  :  : 0 : 0
+#var float4 In.modelCameraPosition :  :  : 0 : 0
+#var float3x4 In.modelMatrix :  : , 3 : 0 : 0
+#var float3x4 In.modelViewMatrix :  : , 3 : 0 : 0
+#var float3x4 In.viewMatrix :  : , 3 : 0 : 0
+#var float4 In.time :  :  : 0 : 0
+#var float4 main_fp : $vout.COLOR : COL : -1 : 1
+PARAM c[2] = { program.local[0..1] };
+TEMP R0;
+TEX R0, fragment.texcoord[0], texture[0], 2D;
+MUL R0.w, R0, c[1].y;
+MUL result.color.w, R0, fragment.texcoord[2];
+MUL result.color.xyz, R0, c[0].y;
+END
+# 4 instructions, 1 R-regs
+]]>
+  </ShaderCode>
+
+  <Parameters>
+    <Parameter name="In.mat.cosPower_EmissiveCoeff_ScaleBias" index="0"/>
+    <Parameter name="In.mat.depthBias_Opacity" index="1"/>
+  </Parameters>
+
+  <Samplers>
+    <Sampler name="In.samplers.emissiveMap"/>
+  </Samplers>
+
+</ShaderCache>

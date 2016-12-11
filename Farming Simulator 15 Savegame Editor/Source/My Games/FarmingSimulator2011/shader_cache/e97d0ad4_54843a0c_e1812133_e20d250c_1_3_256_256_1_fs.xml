@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<ShaderCache>
+  <ShaderCode type="asm">
+<![CDATA[!!ARBfp1.0
+# cgc version 2.1.0017, build date Feb 17 2009
+# command line args: -q -profile arbfp1 -entry main_fp MaxLocalParams=256
+#vendor NVIDIA Corporation
+#version 2.1.0.17
+#profile arbfp1
+#program main_fp
+#semantic main_fp.In
+#var float4 In.vs.texCoords[0] : $vin.TEX0 : TEX0 : 0 : 1
+#var float4 In.vs.texCoords[1] : $vin.TEX1 : TEX1 : 0 : 1
+#var float4 In.vs.texCoords[2] : $vin.TEX2 : TEX2 : 0 : 1
+#var float3 In.vs.lightVectors[0] : $vin.TEX3 : TEX3 : 0 : 1
+#var float3 In.vs.normal : $vin.TEX4 : TEX4 : 0 : 1
+#var float In.vs.volumeFogFactor : $vin.TEX5 : TEX5 : 0 : 1
+#var float In.vs.fogFactor : $vin.TEX6 : TEX6 : 0 : 1
+#var float2 In.vs.terrainLodMapWeights : $vin.TEX7 : TEX7 : 0 : 1
+#var sampler2D In.samplers.layer0Map : TEXUNIT0 : texunit 0 : 0 : 1
+#var sampler2D In.samplers.layer1Map : TEXUNIT1 : texunit 1 : 0 : 1
+#var sampler2D In.samplers.layer2Map : TEXUNIT2 : texunit 2 : 0 : 1
+#var sampler2D In.samplers.weightsMap : TEXUNIT3 : texunit 3 : 0 : 1
+#var sampler2D In.samplers.lodMap : TEXUNIT4 : texunit 4 : 0 : 1
+#var float4 In.lights.dirLightDirections[0] :  : c[0] : 0 : 1
+#var float4 In.lights.spotLightPositions[0] :  :  : 0 : 0
+#var float4 In.lights.spotLightDirections[0] :  : c[1] : 0 : 1
+#var float4 In.lights.spotLightConeParams[0] :  : c[2] : 0 : 1
+#var float4 In.lights.diffuseColors[0] :  : c[3] : 0 : 1
+#var float4 In.lights.diffuseColors[1] :  : c[4] : 0 : 1
+#var float4 In.lights.ambientColor :  : c[5] : 0 : 1
+#var float4 In.lights.hackyAlwaysFillVar :  :  : 0 : 0
+#var float4 In.mat.cosPower_EmissiveCoeff_ScaleBias :  :  : 0 : 0
+#var float4 In.mat.depthBias_Opacity :  :  : 0 : 0
+#var float4 In.mat.reflectionRefractionCoeffScale :  :  : 0 : 0
+#var float4 In.volumeFogColor :  : c[6] : 0 : 1
+#var float4 In.fogColor :  : c[7] : 0 : 1
+#var float4x4 In.modelViewProjMatrix :  : , 4 : 0 : 0
+#var float4 In.cameraPosition :  :  : 0 : 0
+#var float4 In.modelCameraPosition :  :  : 0 : 0
+#var float3x4 In.modelMatrix :  : , 3 : 0 : 0
+#var float3x4 In.modelViewMatrix :  : , 3 : 0 : 0
+#var float3x4 In.viewMatrix :  : , 3 : 0 : 0
+#var float4 In.time :  :  : 0 : 0
+#var float4 main_fp : $vout.COLOR : COL : -1 : 1
+#const c[8] = 0 1 0.1 0.89999998
+#const c[9] = 2 3
+PARAM c[10] = { program.local[0..7],
+		{ 0, 1, 0.1, 0.89999998 },
+		{ 2, 3 } };
+TEMP R0;
+TEMP R1;
+TEMP R2;
+TEMP R3;
+TEX R3.xyz, fragment.texcoord[2], texture[3], 2D;
+TEX R0.xyz, fragment.texcoord[1], texture[1], 2D;
+MUL R1.xyz, R3.y, R0;
+TEX R0.xyz, fragment.texcoord[0].zwzw, texture[0], 2D;
+MAD R2.xyz, R3.x, R0, R1;
+TEX R0, fragment.texcoord[0], texture[4], 2D;
+TEX R1.xyz, fragment.texcoord[1].zwzw, texture[2], 2D;
+MAD R1.xyz, R1, R3.z, R2;
+ADD R2.xyz, R0, -R1;
+MUL R0.w, fragment.texcoord[7].y, R0;
+MAX R0.x, fragment.texcoord[7], R0.w;
+MAD R2.xyz, R0.x, R2, R1;
+DP3 R0.w, fragment.texcoord[3], fragment.texcoord[3];
+RSQ R0.y, R0.w;
+DP3 R0.x, fragment.texcoord[4], fragment.texcoord[4];
+ADD_SAT R0.w, -R0, c[8].y;
+MUL R1.xyz, R0.y, fragment.texcoord[3];
+RSQ R0.x, R0.x;
+MUL R0.xyz, R0.x, fragment.texcoord[4];
+DP3 R1.w, R0, R1;
+DP3 R1.x, -R1, c[1];
+MAD R3.w, R1, c[8].z, c[8].z;
+SLT R2.w, R1, c[8].x;
+CMP R1.w, R1, R3, R1;
+ABS R3.w, R2;
+MAD R2.w, R1, c[8], c[8].z;
+CMP R3.w, -R3, c[8].x, c[8].y;
+CMP R1.w, -R3, R2, R1;
+ADD R2.w, c[2].x, -c[2].y;
+RCP R1.y, R2.w;
+ADD R1.x, R1, -c[2].y;
+MUL_SAT R2.w, R1.x, R1.y;
+MUL R1.xyz, R1.w, c[4];
+MUL R1.w, R2, R2;
+MAD R2.w, -R2, c[9].x, c[9].y;
+MUL R0.w, R0, R0;
+MUL R1.w, R1, R2;
+MUL R1.w, R0, R1;
+DP3 R0.w, R0, -c[0];
+MUL R0.xyz, R1, R1.w;
+MAD R1.y, R0.w, c[8].z, c[8].z;
+SLT R1.x, R0.w, c[8];
+CMP R1.y, R0.w, R1, R0.w;
+ABS R0.w, R1.x;
+MUL R3.xyz, R2, c[5];
+MAD R1.x, R1.y, c[8].w, c[8].z;
+CMP R0.w, -R0, c[8].x, c[8].y;
+CMP R0.w, -R0, R1.x, R1.y;
+MAD R0.xyz, R0.w, c[3], R0;
+MAD R0.xyz, R0, R2, R3;
+ADD R0.xyz, R0, -c[6];
+MAD R0.xyz, fragment.texcoord[5].x, R0, c[6];
+ADD R0.xyz, R0, -c[7];
+MAD result.color.xyz, fragment.texcoord[6].x, R0, c[7];
+MOV result.color.w, c[8].y;
+END
+# 55 instructions, 4 R-regs
+]]>
+  </ShaderCode>
+
+  <Parameters>
+    <Parameter name="In.fogColor" index="7"/>
+    <Parameter name="In.lights.ambientColor" index="5"/>
+    <Parameter name="In.lights.dirLightDirections[0]" index="0"/>
+    <Parameter name="In.lights.spotLightConeParams[0]" index="2"/>
+    <Parameter name="In.lights.spotLightDirections[0]" index="1"/>
+    <Parameter name="In.volumeFogColor" index="6"/>
+    <Parameter name="In.lights.diffuseColors[0]" index="3"/>
+    <Parameter name="In.lights.diffuseColors[1]" index="4"/>
+  </Parameters>
+
+  <Samplers>
+    <Sampler name="In.samplers.layer0Map"/>
+    <Sampler name="In.samplers.layer1Map"/>
+    <Sampler name="In.samplers.layer2Map"/>
+    <Sampler name="In.samplers.weightsMap"/>
+    <Sampler name="In.samplers.lodMap"/>
+  </Samplers>
+
+</ShaderCache>

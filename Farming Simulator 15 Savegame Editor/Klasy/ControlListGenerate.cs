@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Windows.Controls;
 
 namespace Farming_Simulator_15_Savegame_Editor
@@ -12,6 +8,7 @@ namespace Farming_Simulator_15_Savegame_Editor
         /// <summary>Zwraca listę kontrolek textBox</summary>
         public static List<TextBox> listBox(MainWindow control)
         {
+            //tworzymy liste kontrolek i ja zwracamy:
             List<TextBox> listBox = new List<TextBox>();
             listBox.Add(control.potatoBox);
             listBox.Add(control.rapeBox);

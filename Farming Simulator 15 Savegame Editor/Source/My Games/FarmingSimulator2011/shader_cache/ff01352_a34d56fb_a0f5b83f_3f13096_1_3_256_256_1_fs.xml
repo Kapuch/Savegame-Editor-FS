@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<ShaderCache>
+  <ShaderCode type="asm">
+<![CDATA[!!ARBfp1.0
+# cgc version 2.1.0017, build date Feb 17 2009
+# command line args: -q -profile arbfp1 -entry main_fp MaxLocalParams=256
+#vendor NVIDIA Corporation
+#version 2.1.0.17
+#profile arbfp1
+#program main_fp
+#semantic main_fp.In
+#var float4 In.vs.texCoords[0] : $vin.TEX0 : TEX0 : 0 : 0
+#var float3 In.vs.dirLightVectors[0] : $vin.TEX1 : TEX1 : 0 : 0
+#var float3 In.vs.vertToEyeVector : $vin.TEX2 : TEX2 : 0 : 0
+#var float In.vs.fogFactor : $vin.TEX3 : TEX3 : 0 : 0
+#var float In.vs.depthBlendMapDelta : $vin.TEX4 : TEX4 : 0 : 1
+#var sampler2D In.samplers.baseMap : TEXUNIT0 : texunit 0 : 0 : 0
+#var sampler2D In.samplers.normalMap : TEXUNIT1 : texunit 1 : 0 : 0
+#var sampler2D In.samplers.glossMap : TEXUNIT2 : texunit 2 : 0 : 0
+#var float4 In.lights.dirLightDirections[0] :  :  : 0 : 0
+#var float4 In.lights.dirLightPositions[0] :  :  : 0 : 0
+#var float4 In.lights.diffuseColors[0] :  :  : 0 : 0
+#var float4 In.lights.specularColors[0] :  :  : 0 : 0
+#var float4 In.lights.ambientColor :  :  : 0 : 0
+#var float4 In.lights.hackyAlwaysFillVar :  :  : 0 : 0
+#var float4 In.mat.cosPower_EmissiveCoeff_ScaleBias :  :  : 0 : 0
+#var float4 In.mat.depthBias_Opacity :  :  : 0 : 0
+#var float4 In.mat.reflectionRefractionCoeffScale :  :  : 0 : 0
+#var float4 In.fogColor :  :  : 0 : 0
+#var float4 In.depthBlendMapRenderingInfo :  : c[0] : 0 : 1
+#var float4x4 In.modelViewProjMatrix :  : , 4 : 0 : 0
+#var float4 In.cameraPosition :  :  : 0 : 0
+#var float4 In.modelCameraPosition :  :  : 0 : 0
+#var float3x4 In.modelMatrix :  : , 3 : 0 : 0
+#var float3x4 In.modelViewMatrix :  : , 3 : 0 : 0
+#var float3x4 In.viewMatrix :  : , 3 : 0 : 0
+#var float4 In.time :  :  : 0 : 0
+#var float4 main_fp : $vout.COLOR : COL : -1 : 1
+#const c[1] = 1
+PARAM c[2] = { program.local[0],
+		{ 1 } };
+MUL_SAT result.color.xyz, fragment.texcoord[4].x, c[0].yzww;
+MOV result.color.w, c[1].x;
+END
+# 2 instructions, 0 R-regs
+]]>
+  </ShaderCode>
+
+  <Parameters>
+    <Parameter name="In.depthBlendMapRenderingInfo" index="0"/>
+  </Parameters>
+
+  <Samplers>
+    <Sampler name="In.samplers.baseMap"/>
+    <Sampler name="In.samplers.normalMap"/>
+    <Sampler name="In.samplers.glossMap"/>
+  </Samplers>
+
+</ShaderCache>

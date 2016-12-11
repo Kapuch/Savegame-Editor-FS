@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<ShaderCache>
+  <ShaderCode type="asm">
+<![CDATA[!!ARBvp1.0
+# cgc version 2.1.0017, build date Feb 17 2009
+# command line args: -q -profile arbvp1 -entry main_vp MaxLocalParams=256
+#vendor NVIDIA Corporation
+#version 2.1.0.17
+#profile arbvp1
+#program main_vp
+#semantic main_vp.In
+#var float4 In.position : $vin.POSITION : POSITION : 0 : 1
+#var float4 In.blendWeights : $vin.ATTR1 : ATTR1 : 0 : 1
+#var float4 In.blendIndices : $vin.BLENDINDICES : ATTR7 : 0 : 1
+#var float4 In.normal : $vin.NORMAL : NORMAL : 0 : 1
+#var float4 In.color : $vin.COLOR0 :  : 0 : 0
+#var float4 In.specular : $vin.COLOR1 :  : 0 : 0
+#var float4 In.texCoords[0] : $vin.TEXCOORD0 : TEXCOORD0 : 0 : 1
+#var float4 In.texCoords[1] :  :  : 0 : 0
+#var float4 In.texCoords[2] :  :  : 0 : 0
+#var float4 In.texCoords[3] :  :  : 0 : 0
+#var float4 In.texCoords[4] :  :  : 0 : 0
+#var float4 In.tangent : $vin.ATTR14 : ATTR14 : 0 : 0
+#var float4 In.lights.dirLightDirections[0] :  :  : 0 : 0
+#var float4 In.lights.diffuseColors[0] :  :  : 0 : 0
+#var float4 In.lights.ambientColor :  :  : 0 : 0
+#var float4 In.lights.hackyAlwaysFillVar :  :  : 0 : 0
+#var float4x4 In.modelViewProjMatrix :  : c[1], 4 : 0 : 1
+#var float4 In.cameraPosition :  : c[131] : 0 : 1
+#var float4 In.modelCameraPosition :  :  : 0 : 0
+#var float3x4 In.modelMatrix :  : c[5], 3 : 0 : 1
+#var float3x4 In.modelViewMatrix :  : c[8], 3 : 0 : 1
+#var float3x4 In.viewMatrix :  : , 3 : 0 : 0
+#var float4 In.time :  :  : 0 : 0
+#var float2x4 In.blendMatrices[0] :  : c[11], 2 : 0 : 1
+#var float2x4 In.blendMatrices[1] :  : c[13], 2 : 0 : 1
+#var float2x4 In.blendMatrices[2] :  : c[15], 2 : 0 : 1
+#var float2x4 In.blendMatrices[3] :  : c[17], 2 : 0 : 1
+#var float2x4 In.blendMatrices[4] :  : c[19], 2 : 0 : 1
+#var float2x4 In.blendMatrices[5] :  : c[21], 2 : 0 : 1
+#var float2x4 In.blendMatrices[6] :  : c[23], 2 : 0 : 1
+#var float2x4 In.blendMatrices[7] :  : c[25], 2 : 0 : 1
+#var float2x4 In.blendMatrices[8] :  : c[27], 2 : 0 : 1
+#var float2x4 In.blendMatrices[9] :  : c[29], 2 : 0 : 1
+#var float2x4 In.blendMatrices[10] :  : c[31], 2 : 0 : 1
+#var float2x4 In.blendMatrices[11] :  : c[33], 2 : 0 : 1
+#var float2x4 In.blendMatrices[12] :  : c[35], 2 : 0 : 1
+#var float2x4 In.blendMatrices[13] :  : c[37], 2 : 0 : 1
+#var float2x4 In.blendMatrices[14] :  : c[39], 2 : 0 : 1
+#var float2x4 In.blendMatrices[15] :  : c[41], 2 : 0 : 1
+#var float2x4 In.blendMatrices[16] :  : c[43], 2 : 0 : 1
+#var float2x4 In.blendMatrices[17] :  : c[45], 2 : 0 : 1
+#var float2x4 In.blendMatrices[18] :  : c[47], 2 : 0 : 1
+#var float2x4 In.blendMatrices[19] :  : c[49], 2 : 0 : 1
+#var float2x4 In.blendMatrices[20] :  : c[51], 2 : 0 : 1
+#var float2x4 In.blendMatrices[21] :  : c[53], 2 : 0 : 1
+#var float2x4 In.blendMatrices[22] :  : c[55], 2 : 0 : 1
+#var float2x4 In.blendMatrices[23] :  : c[57], 2 : 0 : 1
+#var float2x4 In.blendMatrices[24] :  : c[59], 2 : 0 : 1
+#var float2x4 In.blendMatrices[25] :  : c[61], 2 : 0 : 1
+#var float2x4 In.blendMatrices[26] :  : c[63], 2 : 0 : 1
+#var float2x4 In.blendMatrices[27] :  : c[65], 2 : 0 : 1
+#var float2x4 In.blendMatrices[28] :  : c[67], 2 : 0 : 1
+#var float2x4 In.blendMatrices[29] :  : c[69], 2 : 0 : 1
+#var float2x4 In.blendMatrices[30] :  : c[71], 2 : 0 : 1
+#var float2x4 In.blendMatrices[31] :  : c[73], 2 : 0 : 1
+#var float2x4 In.blendMatrices[32] :  : c[75], 2 : 0 : 1
+#var float2x4 In.blendMatrices[33] :  : c[77], 2 : 0 : 1
+#var float2x4 In.blendMatrices[34] :  : c[79], 2 : 0 : 1
+#var float2x4 In.blendMatrices[35] :  : c[81], 2 : 0 : 1
+#var float2x4 In.blendMatrices[36] :  : c[83], 2 : 0 : 1
+#var float2x4 In.blendMatrices[37] :  : c[85], 2 : 0 : 1
+#var float2x4 In.blendMatrices[38] :  : c[87], 2 : 0 : 1
+#var float2x4 In.blendMatrices[39] :  : c[89], 2 : 0 : 1
+#var float2x4 In.blendMatrices[40] :  : c[91], 2 : 0 : 1
+#var float2x4 In.blendMatrices[41] :  : c[93], 2 : 0 : 1
+#var float2x4 In.blendMatrices[42] :  : c[95], 2 : 0 : 1
+#var float2x4 In.blendMatrices[43] :  : c[97], 2 : 0 : 1
+#var float2x4 In.blendMatrices[44] :  : c[99], 2 : 0 : 1
+#var float2x4 In.blendMatrices[45] :  : c[101], 2 : 0 : 1
+#var float2x4 In.blendMatrices[46] :  : c[103], 2 : 0 : 1
+#var float2x4 In.blendMatrices[47] :  : c[105], 2 : 0 : 1
+#var float2x4 In.blendMatrices[48] :  : c[107], 2 : 0 : 1
+#var float2x4 In.blendMatrices[49] :  : c[109], 2 : 0 : 1
+#var float2x4 In.blendMatrices[50] :  : c[111], 2 : 0 : 1
+#var float2x4 In.blendMatrices[51] :  : c[113], 2 : 0 : 1
+#var float2x4 In.blendMatrices[52] :  : c[115], 2 : 0 : 1
+#var float2x4 In.blendMatrices[53] :  : c[117], 2 : 0 : 1
+#var float2x4 In.blendMatrices[54] :  : c[119], 2 : 0 : 1
+#var float2x4 In.blendMatrices[55] :  : c[121], 2 : 0 : 1
+#var float2x4 In.blendMatrices[56] :  : c[123], 2 : 0 : 1
+#var float2x4 In.blendMatrices[57] :  : c[125], 2 : 0 : 1
+#var float2x4 In.blendMatrices[58] :  : c[127], 2 : 0 : 1
+#var float2x4 In.blendMatrices[59] :  : c[129], 2 : 0 : 1
+#var float4 In.fogStartOrDensityAndEnd :  : c[132] : 0 : 1
+#var float4 In.depthBlendMapRenderingInfo :  : c[133] : 0 : 1
+#var float4 In.mat.cosPower_EmissiveCoeff_ScaleBias :  :  : 0 : 0
+#var float4 In.mat.depthBias_Opacity :  :  : 0 : 0
+#var float4 In.mat.reflectionRefractionCoeffScale :  :  : 0 : 0
+#var float4 main_vp.position : $vout.POSITION : HPOS : -1 : 1
+#var float4 main_vp.texCoords[0] : $vout.TEX0 : TEX0 : -1 : 1
+#var float3 main_vp.normal : $vout.TEX1 : TEX1 : -1 : 1
+#var float main_vp.fogFactor : $vout.TEX2 : TEX2 : -1 : 1
+#var float main_vp.depthBlendMapDelta : $vout.TEX3 : TEX3 : -1 : 1
+#const c[0] = 2 0 1 2.718282
+PARAM c[134] = { { 2, 0, 1, 2.718282 },
+		program.local[1..133] };
+TEMP R0;
+TEMP R1;
+TEMP R2;
+TEMP R3;
+TEMP R4;
+TEMP R5;
+ADDRESS A0;
+FLR R0.x, vertex.attrib[7].z;
+MUL R3.z, R0.x, c[0].x;
+ARL A0.x, R3.z;
+FLR R2.x, vertex.attrib[7];
+MUL R3.x, R2, c[0];
+FLR R2.x, vertex.attrib[7].y;
+ADD R0, -c[A0.x + 11], -c[A0.x + 11];
+MOV R1, c[A0.x + 11];
+ARL A0.x, R3.x;
+DP4 R1.x, c[A0.x + 11], R1;
+SLT R3.y, R1.x, c[0];
+ARL A0.x, R3.z;
+MAD R1, R0, R3.y, c[A0.x + 11];
+MUL R4.x, R2, c[0];
+ARL A0.x, R4.x;
+MOV R2, c[A0.x + 11];
+ADD R0, -c[A0.x + 11], -c[A0.x + 11];
+ARL A0.x, R3.x;
+DP4 R2.y, c[A0.x + 11], R2;
+FLR R2.x, vertex.attrib[7].w;
+SLT R3.w, R2.y, c[0].y;
+ARL A0.x, R4.x;
+MAD R0, R0, R3.w, c[A0.x + 11];
+MUL R4.w, R2.x, c[0].x;
+MUL R2, vertex.attrib[1].y, R0;
+ARL A0.x, R4.w;
+MOV R0, c[A0.x + 11];
+ARL A0.x, R3.x;
+MAD R2, vertex.attrib[1].x, c[A0.x + 11], R2;
+DP4 R0.x, c[A0.x + 11], R0;
+MAD R1, vertex.attrib[1].z, R1, R2;
+SLT R5.w, R0.x, c[0].y;
+ARL A0.x, R4.w;
+ADD R0, -c[A0.x + 11], -c[A0.x + 11];
+MAD R0, R0, R5.w, c[A0.x + 11];
+MAD R0, vertex.attrib[1].w, R0, R1;
+DP4 R1.x, R0, R0;
+RSQ R5.z, R1.x;
+MUL R1, R5.z, R0;
+MUL R0.xyz, R1.wyzw, vertex.position.yzxw;
+MAD R2.xyz, R1.zwyw, vertex.position.zxyw, -R0;
+ARL A0.x, R4.x;
+ADD R0, -c[A0.x + 12], -c[A0.x + 12];
+MAD R0, R3.w, R0, c[A0.x + 12];
+MAD R4.xyz, R1.x, vertex.position, R2;
+ARL A0.x, R3.z;
+ADD R2, -c[A0.x + 12], -c[A0.x + 12];
+MAD R2, R3.y, R2, c[A0.x + 12];
+ARL A0.x, R3.x;
+MUL R0, vertex.attrib[1].y, R0;
+MAD R3, vertex.attrib[1].x, c[A0.x + 12], R0;
+ARL A0.x, R4.w;
+ADD R0, -c[A0.x + 12], -c[A0.x + 12];
+MAD R2, vertex.attrib[1].z, R2, R3;
+MAD R0, R5.w, R0, c[A0.x + 12];
+MAD R0, vertex.attrib[1].w, R0, R2;
+MUL R2.xyz, R1.wyzw, R4.yzxw;
+MUL R0, R5.z, R0;
+MAD R3.xyz, R1.zwyw, R4.zxyw, -R2;
+MUL R2.xyz, R1.wyzw, R0.zwyw;
+MAD R2.xyz, R1.zwyw, R0.wyzw, -R2;
+MUL R4.xyz, R1.yzww, R0.x;
+MAD R0.xyz, R1.x, R0.yzww, -R4;
+ADD R0.xyz, R0, R2;
+MAD R2.xyz, R3, c[0].x, vertex.position;
+MAD R0.xyz, R0, c[0].x, R2;
+MOV R0.w, c[0].z;
+DP4 R2.z, R0, c[7];
+DP4 R2.x, R0, c[5];
+DP4 R2.y, R0, c[6];
+ADD R2.xyz, -R2, c[131];
+DP3 R2.x, R2, R2;
+RSQ R2.x, R2.x;
+RCP R2.x, R2.x;
+MUL R2.w, R2.x, c[132].x;
+MUL R2.xyz, R1.wyzw, vertex.normal.yzxw;
+MAD R2.xyz, R1.zwyw, vertex.normal.zxyw, -R2;
+MAD R2.xyz, R1.x, vertex.normal, R2;
+MUL R3.xyz, R1.wyzw, R2.yzxw;
+MAD R1.xyz, R1.zwyw, R2.zxyw, -R3;
+MAD R2.xyz, R1, c[0].x, vertex.normal;
+POW R2.w, c[0].w, -R2.w;
+MIN R2.w, R2, c[0].z;
+DP3 R1.z, R2, c[7];
+DP3 R1.x, R2, c[5];
+DP3 R1.y, R2, c[6];
+DP3 R1.w, R1, R1;
+RSQ R1.w, R1.w;
+DP4 result.position.w, R0, c[4];
+DP4 result.position.z, R0, c[3];
+DP4 result.position.y, R0, c[2];
+DP4 result.position.x, R0, c[1];
+DP4 R0.x, R0, c[10];
+MAX result.texcoord[2].x, R2.w, c[0].y;
+MUL result.texcoord[1].xyz, R1.w, R1;
+ADD result.texcoord[3].x, -R0, -c[133];
+MOV result.texcoord[0].xy, vertex.texcoord[0];
+MOV result.texcoord[0].zw, R5.xyxy;
+END
+# 98 instructions, 6 R-regs
+]]>
+  </ShaderCode>
+
+  <Parameters>
+    <Parameter name="In.blendMatrices[19]" index="49"/>
+    <Parameter name="In.blendMatrices[58]" index="127"/>
+    <Parameter name="In.blendMatrices[34]" index="79"/>
+    <Parameter name="In.blendMatrices[49]" index="109"/>
+    <Parameter name="In.blendMatrices[4]" index="19"/>
+    <Parameter name="In.blendMatrices[53]" index="117"/>
+    <Parameter name="In.blendMatrices[55]" index="121"/>
+    <Parameter name="In.modelViewMatrix" index="8"/>
+    <Parameter name="In.blendMatrices[2]" index="15"/>
+    <Parameter name="In.blendMatrices[24]" index="59"/>
+    <Parameter name="In.blendMatrices[44]" index="99"/>
+    <Parameter name="In.blendMatrices[50]" index="111"/>
+    <Parameter name="In.blendMatrices[52]" index="115"/>
+    <Parameter name="In.blendMatrices[7]" index="25"/>
+    <Parameter name="In.blendMatrices[29]" index="69"/>
+    <Parameter name="In.blendMatrices[42]" index="95"/>
+    <Parameter name="In.blendMatrices[5]" index="21"/>
+    <Parameter name="In.blendMatrices[15]" index="41"/>
+    <Parameter name="In.blendMatrices[22]" index="55"/>
+    <Parameter name="In.blendMatrices[39]" index="89"/>
+    <Parameter name="In.blendMatrices[47]" index="105"/>
+    <Parameter name="In.modelMatrix" index="5"/>
+    <Parameter name="In.modelViewProjMatrix" index="1"/>
+    <Parameter name="In.blendMatrices[13]" index="37"/>
+    <Parameter name="In.blendMatrices[37]" index="85"/>
+    <Parameter name="In.blendMatrices[45]" index="101"/>
+    <Parameter name="In.blendMatrices[59]" index="129"/>
+    <Parameter name="In.fogStartOrDensityAndEnd" index="132"/>
+    <Parameter name="In.blendMatrices[21]" index="53"/>
+    <Parameter name="In.blendMatrices[23]" index="57"/>
+    <Parameter name="In.blendMatrices[38]" index="87"/>
+    <Parameter name="In.blendMatrices[10]" index="31"/>
+    <Parameter name="In.blendMatrices[31]" index="73"/>
+    <Parameter name="In.blendMatrices[51]" index="113"/>
+    <Parameter name="In.depthBlendMapRenderingInfo" index="133"/>
+    <Parameter name="In.blendMatrices[12]" index="35"/>
+    <Parameter name="In.blendMatrices[32]" index="75"/>
+    <Parameter name="In.blendMatrices[6]" index="23"/>
+    <Parameter name="In.blendMatrices[28]" index="67"/>
+    <Parameter name="In.blendMatrices[30]" index="71"/>
+    <Parameter name="In.blendMatrices[57]" index="125"/>
+    <Parameter name="In.blendMatrices[0]" index="11"/>
+    <Parameter name="In.blendMatrices[18]" index="47"/>
+    <Parameter name="In.blendMatrices[46]" index="103"/>
+    <Parameter name="In.blendMatrices[26]" index="63"/>
+    <Parameter name="In.blendMatrices[3]" index="17"/>
+    <Parameter name="In.blendMatrices[54]" index="119"/>
+    <Parameter name="In.blendMatrices[56]" index="123"/>
+    <Parameter name="In.blendMatrices[17]" index="45"/>
+    <Parameter name="In.blendMatrices[1]" index="13"/>
+    <Parameter name="In.blendMatrices[20]" index="51"/>
+    <Parameter name="In.blendMatrices[40]" index="91"/>
+    <Parameter name="In.blendMatrices[8]" index="27"/>
+    <Parameter name="In.blendMatrices[11]" index="33"/>
+    <Parameter name="In.blendMatrices[25]" index="61"/>
+    <Parameter name="In.blendMatrices[27]" index="65"/>
+    <Parameter name="In.blendMatrices[35]" index="81"/>
+    <Parameter name="In.blendMatrices[43]" index="97"/>
+    <Parameter name="In.cameraPosition" index="131"/>
+    <Parameter name="In.blendMatrices[14]" index="39"/>
+    <Parameter name="In.blendMatrices[16]" index="43"/>
+    <Parameter name="In.blendMatrices[33]" index="77"/>
+    <Parameter name="In.blendMatrices[41]" index="93"/>
+    <Parameter name="In.blendMatrices[48]" index="107"/>
+    <Parameter name="In.blendMatrices[9]" index="29"/>
+    <Parameter name="In.blendMatrices[36]" index="83"/>
+  </Parameters>
+
+  <Samplers>
+  </Samplers>
+
+</ShaderCache>

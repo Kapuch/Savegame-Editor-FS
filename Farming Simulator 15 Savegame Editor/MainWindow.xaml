@@ -7,6 +7,9 @@
         xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="Farming_Simulator_15_Savegame_Editor.MainWindow"
         mc:Ignorable="d"
         Title="Farming Simulator Savegame Editor" Height="337" Width="650">
+    <Window.Resources>
+        <BitmapImage x:Key="Editor" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="editor.png"/>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="203*"/>
@@ -40,9 +43,9 @@
         <Label x:Name="liquidManureLabel" Content="Gnojowica" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,41,0,0" Grid.Row="2" Height="26" Width="65" Grid.Column="2" d:IsLocked="True"/>
         <TextBox x:Name="grassBox" HorizontalAlignment="Left" Height="26" Margin="106,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="1" Grid.Row="2" PreviewTextInput="Box_PreviewTextInput" IsEnabled="False" d:IsLocked="True"/>
         <Label x:Name="grassLabel" Content="Trawa" HorizontalAlignment="Left" Margin="61,10,0,0" VerticalAlignment="Top" Height="26" Width="40" Grid.Column="1" Grid.Row="2" d:IsLocked="True"/>
-        <Label x:Name="siloGridLabel" Content="Silosy:" Margin="10,0,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" HorizontalAlignment="Left" Width="43" d:IsLocked="True"/>
-        <Label x:Name="moveSilioGridLabel" Content="Silosy przejazdowe i stosy:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="10,2,0,0" Grid.Row="1" Height="33" Width="149" d:IsLocked="True" Grid.RowSpan="2"/>
-        <Label x:Name="manureGridLabel" Content="Nawozy:" Grid.Column="2" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Grid.Row="1" d:IsLocked="True" Height="26" Width="55"/>
+        <Label x:Name="siloGridLabel" Content="Silosy:" Margin="27,0,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" HorizontalAlignment="Left" Width="43"/>
+        <Label x:Name="moveSilioGridLabel" Content="Silosy przejazdowe i stosy:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="32,0,0,0" Grid.Row="1" Height="33" Width="149" Grid.RowSpan="2"/>
+        <Label x:Name="manureGridLabel" Content="Nawozy:" Grid.Column="2" HorizontalAlignment="Left" Margin="32,0,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" Width="55"/>
         <Button x:Name="OpenButton" Content="Otwórz" HorizontalAlignment="Left" Margin="48,15,0,0" VerticalAlignment="Top" Width="65" Click="button_Click" Height="24" Grid.Column="2"/>
         <ComboBox x:Name="DIRcomboBox" HorizontalAlignment="Left" Margin="73,12,0,0" VerticalAlignment="Top" Width="153" SelectedIndex="0" DropDownClosed="DIRcomboBox_DropDownClosed" Height="22" Grid.Column="1"/>
         <ComboBox x:Name="SAVEcomboBox" HorizontalAlignment="Left" Margin="73,39,0,0" VerticalAlignment="Top" Width="153" Grid.Column="1" IsEnabled="False" DropDownClosed="SAVEcomboBox_DropDownClosed" Height="22"/>
@@ -56,6 +59,10 @@
         <Label x:Name="statusLabel" Content="Nie wybrano" HorizontalAlignment="Left" Margin="122,162,0,0" VerticalAlignment="Top" Width="361" IsEnabled="False" Height="26" Grid.Row="2" Grid.ColumnSpan="3" d:IsLocked="True"/>
         <Button x:Name="FieldManageButton" Content="Zarządzaj" Grid.Column="2" HorizontalAlignment="Left" Margin="78,136,0,0" Grid.Row="2" VerticalAlignment="Top" Width="120" IsEnabled="False" Height="26" Click="FieldManageButton_Click"/>
         <Label x:Name="fieldLabel" Content="Pola" Grid.Column="2" HorizontalAlignment="Left" Margin="41,136,0,0" Grid.Row="2" VerticalAlignment="Top" ToolTip="Zarządzaj posiadanymi polami. Niedostępne w wyborze ręcznym lub wersji 2011 i starszej" Height="26" Width="32"/>
+        <Image x:Name="imagesilo" HorizontalAlignment="Left" Height="32" Margin="0,80,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="32" Source="Source/movesilo.png" Grid.Column="1"/>
+        <Image x:Name="imagemovesilo" HorizontalAlignment="Left" Height="32" Margin="0,80,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="32" Source="Source/silo.png"/>
+        <Image x:Name="imagemanure" HorizontalAlignment="Left" Height="32" Margin="0,80,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="32" Source="Source/eco.png" Grid.Column="2"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="80" Grid.RowSpan="2" VerticalAlignment="Top" Width="200" Source="Source/editor.png"/>
 
     </Grid>
 </Window>

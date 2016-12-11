@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<careerVehicles>
+    <vehicle id="1" filename="data/vehicles/steerable/same/sameArgon3-75.xml" isAbsolute="true" fuelFillLevel="70">
+       <component1 position="-48.000003814697 124.99601745605 -51.999897003174" rotation="-3.1238484382629 -7.1662680056761e-006 3.1404736042023" />
+    </vehicle>
+    <vehicle id="2" filename="data/vehicles/steerable/kramer/kramerKL200.xml" isAbsolute="true" fuelFillLevel="24">
+       <component1 position="-40 125.03499603271 -51.999912261963" rotation="3.1388909816742 3.0381892202058e-007 -3.1415898799896" />
+    </vehicle>
+    <vehicle id="3" filename="data/vehicles/steerable/buehrer/buehrer6135A.xml" isAbsolute="true" fuelFillLevel="120">
+       <component1 position="-31.999984741211 125.01853942871 -52.000114440918" rotation="-3.1299381256104 -1.3346369769351e-006 -3.1415779590607" />
+    </vehicle>
+    <vehicle id="4" filename="data/vehicles/steerable/fahr/fahrM66.xml" isAbsolute="true" fuelFillLevel="100" grainTankFillLevel="0" grainTankFruitType="unknown">
+       <component1 position="-124.00022125244 124.96378326416 15.000019073486" rotation="-0.0054475828073919 -1.5707963705063 0" />
+       <component2 position="-124.00019836426 124.96377563477 14.999996185303" rotation="-0.0054475967772305 -1.5707963705063 0" />
+    </vehicle>
+    <vehicle id="5" filename="data/vehicles/steerable/kramer/kramerKL200.xml" isAbsolute="true" fuelFillLevel="24">
+       <component1 position="303 155.03500366211 569.99987792969" rotation="-0.0026978780515492 1.1041696446057e-008 -3.4664824397623e-006" />
+    </vehicle>
+    <vehicle id="6" filename="data/vehicles/steerable/kramer/kramerKL200.xml" isAbsolute="true" fuelFillLevel="24">
+       <component1 position="-647.00006103516 158.03500366211 497" rotation="3.1389107704163 1.2216957807541 -3.1415774822235" />
+    </vehicle>
+    <vehicle id="7" filename="data/vehicles/steerable/kramer/kramerKL200.xml" isAbsolute="true" fuelFillLevel="24">
+       <component1 position="-230.49990844727 88.134994506836 -723.14996337891" rotation="3.138875246048 -1.3090008497238 -3.1415717601776" />
+    </vehicle>
+    <vehicle id="8" filename="data/vehicles/tools/poettinger/poettingerServo35.xml" isAbsolute="true" foldAnimTime="0">
+       <component1 position="-53.99995803833 125.00137329102 -46.999938964844" rotation="3.1365146636963 -1.8595748770167e-005 -3.1415793895721" />
+       <component2 position="-54.615676879883 125.66519927979 -44.651329040527" rotation="3.1367712020874 -0.00012556530418806 -3.1415894031525" />
+    </vehicle>
+    <vehicle id="9" filename="data/vehicles/tools/lemken/lemkenKristall9.xml" isAbsolute="true" foldAnimTime="0">
+       <component1 position="-48 124.98000335693 -47" rotation="3.1415927410126 6.4256948917318e-007 -3.141592502594" />
+    </vehicle>
+    <vehicle id="10" filename="data/vehicles/tools/amazone/amazoneD1.xml" isAbsolute="true" fillLevel="0" fillType="unknown" selectedSeedFruitType="wheat" foldAnimTime="0">
+       <component1 position="-39.999980926514 124.96488189697 -46.999961853027" rotation="-3.1318759918213 2.3477134163841e-005 -3.1415922641754" />
+    </vehicle>
+    <vehicle id="11" filename="data/vehicles/trailers/krone/kroneEmsland.xml" isAbsolute="true" fillLevel="0" fillType="unknown">
+       <component1 position="-32.000034332275 125.01977539063 -43.000034332275" rotation="3.1410458087921 -3.037268834305e-005 -3.1415832042694" />
+       <component2 position="-31.999876022339 125.76078796387 -44.503433227539" rotation="3.1412172317505 -4.6043447810007e-007 -3.1414620876312" />
+       <component3 position="-32.000141143799 125.5463180542 -45.671058654785" rotation="-2.7917006015778 -7.5610005296767e-005 3.1415016651154" />
+    </vehicle>
+    <vehicle id="12" filename="data/vehicles/steerable/fahr/fahrM66Cutter.xml" isAbsolute="true">
+       <component1 position="-128.00382995605 124.85785675049 15.000716209412" rotation="0.12079083919525 1.5707963705063 0" />
+    </vehicle>
+    <vehicle id="13" filename="data/vehicles/tools/extraWeight01.xml" isAbsolute="true">
+       <component1 position="-48 124.98496246338 -57" rotation="-1.9331976019998e-008 -3.736930125342e-007 -3.8463102924879e-008" />
+    </vehicle>
+    <vehicle id="14" filename="data/vehicles/tools/extraWeight01.xml" isAbsolute="true">
+       <component1 position="-54 124.98496246338 -57" rotation="-1.9331976019998e-008 -3.736930125342e-007 -3.8463102924879e-008" />
+    </vehicle>
+    <vehicle id="15" filename="data/vehicles/steerable/lizard/golfCart.xml" isAbsolute="true" fuelFillLevel="30">
+       <component1 position="802.55004882813 197.02194213867 616" rotation="3.140823841095 9.7618249128573e-006 3.1415095329285" />
+    </vehicle>
+    <vehicle id="16" filename="data/vehicles/steerable/lizard/golfCart.xml" isAbsolute="true" fuelFillLevel="30">
+       <component1 position="905.00048828125 198.20399475098 730.00018310547" rotation="3.1037266254425 -1.0471539497375 3.1367208957672" />
+    </vehicle>
+    <vehicle id="17" filename="data/vehicles/steerable/lizard/golfCart.xml" isAbsolute="true" fuelFillLevel="30">
+       <component1 position="740.00006103516 197.2453918457 615.00042724609" rotation="3.0834982395172 -0.00028386453050189 3.1338963508606" />
+    </vehicle>
+    <vehicle id="18" filename="data/vehicles/steerable/lizard/golfCart.xml" isAbsolute="true" fuelFillLevel="30">
+       <component1 position="-406.99951171875 87.587295532227 -872.99877929688" rotation="3.0500173568726 0.87134194374084 3.0632932186127" />
+    </vehicle>
+    <onCreateLoadedObject id="1" state="0" compactedFillLevel="0" fermentingTime="0" silagePlaneMoveAlpha="0" silagePlaneMoveAlphaMax="1">
+       <movingPlane1 fillLevel="0" />
+       <movingPlane2 fillLevel="0" />
+       <movingPlane3 fillLevel="0" />
+       <movingPlane4 fillLevel="0" />
+       <movingPlane5 fillLevel="0" />
+    </onCreateLoadedObject>
+    <onCreateLoadedObject id="2" liquidManureSiloFillLevel="0" bunkerFillLevel="0"/>
+    <onCreateLoadedObject id="3" state="0" compactedFillLevel="0" fermentingTime="0" silagePlaneMoveAlpha="0" silagePlaneMoveAlphaMax="1">
+       <movingPlane1 fillLevel="0" />
+       <movingPlane2 fillLevel="0" />
+       <movingPlane3 fillLevel="0" />
+       <movingPlane4 fillLevel="0" />
+       <movingPlane5 fillLevel="0" />
+       <movingPlane6 fillLevel="0" />
+       <movingPlane7 fillLevel="0" />
+       <movingPlane8 fillLevel="0" />
+       <movingPlane9 fillLevel="0" />
+       <movingPlane10 fillLevel="0" />
+       <movingPlane11 fillLevel="0" />
+       <movingPlane12 fillLevel="0" />
+       <movingPlane13 fillLevel="0" />
+       <movingPlane14 fillLevel="0" />
+       <movingPlane15 fillLevel="0" />
+    </onCreateLoadedObject>
+    <onCreateLoadedObject id="4" state="0" compactedFillLevel="0" fermentingTime="0" silagePlaneMoveAlpha="0" silagePlaneMoveAlphaMax="1">
+       <movingPlane1 fillLevel="0" />
+       <movingPlane2 fillLevel="0" />
+       <movingPlane3 fillLevel="0" />
+       <movingPlane4 fillLevel="0" />
+       <movingPlane5 fillLevel="0" />
+       <movingPlane6 fillLevel="0" />
+       <movingPlane7 fillLevel="0" />
+       <movingPlane8 fillLevel="0" />
+       <movingPlane9 fillLevel="0" />
+       <movingPlane10 fillLevel="0" />
+       <movingPlane11 fillLevel="0" />
+       <movingPlane12 fillLevel="0" />
+       <movingPlane13 fillLevel="0" />
+       <movingPlane14 fillLevel="0" />
+       <movingPlane15 fillLevel="0" />
+    </onCreateLoadedObject>
+    <onCreateLoadedObject id="5" state="0" compactedFillLevel="0" fermentingTime="0" silagePlaneMoveAlpha="0" silagePlaneMoveAlphaMax="1">
+       <movingPlane1 fillLevel="0" />
+       <movingPlane2 fillLevel="0" />
+       <movingPlane3 fillLevel="0" />
+       <movingPlane4 fillLevel="0" />
+       <movingPlane5 fillLevel="0" />
+       <movingPlane6 fillLevel="0" />
+       <movingPlane7 fillLevel="0" />
+       <movingPlane8 fillLevel="0" />
+       <movingPlane9 fillLevel="0" />
+       <movingPlane10 fillLevel="0" />
+       <movingPlane11 fillLevel="0" />
+       <movingPlane12 fillLevel="0" />
+       <movingPlane13 fillLevel="0" />
+       <movingPlane14 fillLevel="0" />
+       <movingPlane15 fillLevel="0" />
+    </onCreateLoadedObject>
+    <onCreateLoadedObject id="6" state="0" compactedFillLevel="0" fermentingTime="0" silagePlaneMoveAlpha="0" silagePlaneMoveAlphaMax="1">
+       <movingPlane1 fillLevel="0" />
+       <movingPlane2 fillLevel="0" />
+       <movingPlane3 fillLevel="0" />
+       <movingPlane4 fillLevel="0" />
+       <movingPlane5 fillLevel="0" />
+       <movingPlane6 fillLevel="0" />
+       <movingPlane7 fillLevel="0" />
+       <movingPlane8 fillLevel="0" />
+       <movingPlane9 fillLevel="0" />
+       <movingPlane10 fillLevel="0" />
+       <movingPlane11 fillLevel="0" />
+       <movingPlane12 fillLevel="0" />
+       <movingPlane13 fillLevel="0" />
+       <movingPlane14 fillLevel="0" />
+       <movingPlane15 fillLevel="0" />
+    </onCreateLoadedObject>
+    <onCreateLoadedObject id="7"  numAnimals0="0" numAnimals1="0" liquidManureFillLevel="0" manureHeapFillLevel="0"/>
+    <onCreateLoadedObject id="8"  numAnimals0="0" numAnimals1="0"/>
+    <onCreateLoadedObject id="9"  numAnimals0="0" numAnimals1="1" numActivePickupObjects="0"/>
+</careerVehicles>

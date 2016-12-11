@@ -1,0 +1,86 @@
+GIANTS Engine Runtime (build date: Nov 15 2010)
+(C) 2003-2010, GIANTS Software GmbH (www.giants-software.com), All Rights Reserved.
+Application: FarmingSimulator2011
+Main System
+  Core(s): 8 @ 2.2 GHZ
+  OS: Windows NT 6.2 64-bit
+Physics System
+  Driver: NVIDIA PhysX Runtime
+  Version: 2.8.3
+  Thread(s): 1
+Input System
+  Keyboard enabled
+  Mouse enabled
+  Gamepad/Joystick disabled
+  Force Feedback disabled
+Sound System
+  Driver: OpenAL
+  Version: 1.1
+  Device:  Generic Software
+  Max. sources: 256
+  EFX extensions initialized 
+  Generated 1 Aux Effect Slot(s)
+Render System
+  Driver: OpenGL
+  Card Vendor: Intel
+  Renderer: Intel(R) HD Graphics 4000
+  Version: 4.0.0 - Build 10.18.10.4358
+    GL_NV_texture_compression_vtc not supported
+    GL_NV_vertex_program2_option not supported
+    GL_NV_vertex_program3 not supported
+    GL_NV_register_combiners2 not supported
+    GL_ATI_fragment_shader not supported
+    max_texture_layers: 8
+    GL_NV_fragment_program_option not supported
+    GL_NV_fragment_program2 not supported
+    GL_ATI_texture_float not supported
+  OpenGL initialization successful
+Hardware Profile
+  Level: Low
+  View Distance Coeff: 0.75
+  Shadow Quality: 0
+  Skip Mipmaps: 1
+  Terrain LOD Distance Coeff: 0.75
+Farming Simulator 2011
+  Version: 1.02 (Patch 2) RC4
+  Available Languages: pl
+  Language: pl
+Game vehicle types loaded
+Mod directory: C:/Users/Patryk/Documents/My Games/FarmingSimulator2011/mods
+data/sky/sky_day_night.i3d (0.00mb in 6.14 ms)
+data/sky/rain.i3d (0.00mb in 0.94 ms)
+data/sky/hail.i3d (0.00mb in 0.70 ms)
+data/maps/map01.i3d (38.23mb in 6745.29 ms)
+data/vehicles/particleSystems/wheatParticleSystemLong.i3d (0.00mb in 0.99 ms)
+data/vehicles/particleSystems/wheatParticleSystemLong.i3d (0.00mb in 0.30 ms)
+data/vehicles/particleSystems/wheatParticleSystemLong.i3d (0.00mb in 0.28 ms)
+data/vehicles/particleSystems/wheatParticleSystemLong.i3d (0.00mb in 0.30 ms)
+data/maps/map01/paths/trafficPaths.i3d (0.04mb in 2.18 ms)
+data/maps/map01/paths/pedestrianPaths.i3d (0.01mb in 0.61 ms)
+dataS2/character/pedestrians/casual15.i3d (0.40mb in 30.37 ms)
+dataS2/character/pedestrians/casual07.i3d (0.33mb in 23.76 ms)
+dataS2/character/pedestrians/casual02.i3d (0.31mb in 21.97 ms)
+dataS2/character/pedestrians/casual03.i3d (0.33mb in 22.70 ms)
+dataS2/character/pedestrians/casual08.i3d (0.53mb in 37.83 ms)
+dataS2/character/pedestrians/executive03.i3d (0.27mb in 17.04 ms)
+data/maps/missions/CattleMeadow.i3d (0.64mb in 24.81 ms)
+dataS2/character/cow/cowAnimation.i3d (16.80mb in 637.65 ms)
+data/vehicles/cutters/lizard/lizard58Cutter.i3d (0.74mb in 23.78 ms)
+data/vehicles/trailers/smallTipper.i3d (0.54mb in 19.88 ms)
+data/vehicles/tools/cultivator01.i3d (0.37mb in 16.21 ms)
+data/vehicles/tools/sowingMachine01.i3d (0.48mb in 21.34 ms)
+data/vehicles/tools/plough01.i3d (0.17mb in 5.65 ms)
+data/vehicles/tools/triton200.i3d (0.13mb in 6.01 ms)
+data/vehicles/cutters/lizard/lizardCutter7210.i3d (0.53mb in 17.01 ms)
+data/maps/missions/glassContainers.i3d (0.06mb in 2.26 ms)
+data/maps/missions/collectableBottles.i3d (0.07mb in 3.90 ms)
+data/maps/missions/careerInfoTriggers.i3d (0.03mb in 1.46 ms)
+data/maps/map01/achievements/achievements.i3d (0.25mb in 9.80 ms)
+data/character/farmer/farmer_player.i3d (2.40mb in 99.77 ms)
+data/vehicles/trucks/milktruck.i3d (2.11mb in 122.65 ms)
+data/vehicles/cars/car2.i3d (0.41mb in 23.52 ms)
+data/vehicles/cars/car4.i3d (0.33mb in 17.45 ms)
+data/vehicles/cars/car5.i3d (0.37mb in 20.23 ms)
+data/vehicles/cars/car3.i3d (0.39mb in 19.43 ms)
+data/vehicles/cars/car9.i3d (0.43mb in 27.84 ms)
+data/vehicles/cars/car6.i3d (0.38mb in 22.19 ms)

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<ShaderCache>
+  <ShaderCode type="asm">
+<![CDATA[!!ARBfp1.0
+# cgc version 2.1.0017, build date Feb 17 2009
+# command line args: -q -profile arbfp1 -entry main_fp MaxLocalParams=256
+#vendor NVIDIA Corporation
+#version 2.1.0.17
+#profile arbfp1
+#program main_fp
+#semantic main_fp.In
+#var float4 In.vs.texCoords[0] : $vin.TEX0 : TEX0 : 0 : 1
+#var float3 In.vs.dirLightVectors[0] : $vin.TEX1 : TEX1 : 0 : 1
+#var float3 In.vs.vertToEyeVector : $vin.TEX2 : TEX2 : 0 : 1
+#var float In.vs.fogFactor : $vin.TEX3 : TEX3 : 0 : 1
+#var sampler2D In.samplers.baseMap : TEXUNIT0 : texunit 0 : 0 : 1
+#var sampler2D In.samplers.normalMap : TEXUNIT1 : texunit 1 : 0 : 1
+#var float4 In.lights.dirLightDirections[0] :  :  : 0 : 0
+#var float4 In.lights.dirLightPositions[0] :  :  : 0 : 0
+#var float4 In.lights.diffuseColors[0] :  : c[0] : 0 : 1
+#var float4 In.lights.specularColors[0] :  : c[1] : 0 : 1
+#var float4 In.lights.ambientColor :  : c[2] : 0 : 1
+#var float4 In.lights.hackyAlwaysFillVar :  :  : 0 : 0
+#var float4 In.mat.cosPower_EmissiveCoeff_ScaleBias :  : c[3] : 0 : 1
+#var float4 In.mat.depthBias_Opacity :  :  : 0 : 0
+#var float4 In.mat.reflectionRefractionCoeffScale :  :  : 0 : 0
+#var float4 In.mat.directionAndFrequency :  :  : 0 : 0
+#var float4 In.fogColor :  : c[4] : 0 : 1
+#var float4x4 In.modelViewProjMatrix :  : , 4 : 0 : 0
+#var float4 In.cameraPosition :  :  : 0 : 0
+#var float4 In.modelCameraPosition :  :  : 0 : 0
+#var float3x4 In.modelMatrix :  : , 3 : 0 : 0
+#var float3x4 In.modelViewMatrix :  : , 3 : 0 : 0
+#var float3x4 In.viewMatrix :  : , 3 : 0 : 0
+#var float4 In.time :  :  : 0 : 0
+#var float4 main_fp : $vout.COLOR : COL : -1 : 1
+#var <none>4 $kill_0000 : $vout.$kill : $kill : -1 : 0
+#const c[5] = 2 1 0 0.1
+#const c[6] = 0.89999998 0.5
+PARAM c[7] = { program.local[0..4],
+		{ 2, 1, 0, 0.1 },
+		{ 0.89999998, 0.5 } };
+TEMP R0;
+TEMP R1;
+TEMP R2;
+TEX R0.xyz, fragment.texcoord[0], texture[1], 2D;
+MAD R0.xyz, R0, c[5].x, -c[5].y;
+DP3 R1.x, fragment.texcoord[1], fragment.texcoord[1];
+RSQ R1.x, R1.x;
+DP3 R1.w, fragment.texcoord[2], fragment.texcoord[2];
+DP3 R0.w, R0, R0;
+MUL R1.xyz, R1.x, fragment.texcoord[1];
+RSQ R1.w, R1.w;
+MAD R2.xyz, R1.w, fragment.texcoord[2], R1;
+RSQ R1.w, R0.w;
+MUL R0.xyz, R1.w, R0;
+DP3 R0.w, R2, R2;
+RSQ R1.w, R0.w;
+DP3 R0.w, R1, R0;
+MUL R1.xyz, R1.w, R2;
+DP3_SAT R1.x, R0, R1;
+MAD R1.w, R0, c[5], c[5];
+CMP R0.y, R0.w, R1.w, R0.w;
+SLT R0.x, R0.w, c[5].z;
+MUL R0.z, R0.y, c[6].x;
+ABS R0.x, R0;
+ADD R0.z, R0, c[5].w;
+CMP R0.x, -R0, c[5].z, c[5].y;
+CMP R0.x, -R0, R0.z, R0.y;
+POW R0.y, R1.x, c[3].x;
+MUL R1.xyz, R0.x, c[0];
+MUL R2.xyz, R0.y, c[1];
+TEX R0, fragment.texcoord[0], texture[0], 2D;
+MAD R1.xyz, R0, R1, R2;
+MAD R0.xyz, R0, c[2], R1;
+ADD R0.xyz, R0, -c[4];
+MAD result.color.xyz, fragment.texcoord[3].x, R0, c[4];
+SLT R0.x, R0.w, c[6].y;
+MOV result.color.w, R0;
+KIL -R0.x;
+END
+# 35 instructions, 3 R-regs
+]]>
+  </ShaderCode>
+
+  <Parameters>
+    <Parameter name="In.fogColor" index="4"/>
+    <Parameter name="In.lights.ambientColor" index="2"/>
+    <Parameter name="In.mat.cosPower_EmissiveCoeff_ScaleBias" index="3"/>
+    <Parameter name="In.lights.diffuseColors[0]" index="0"/>
+    <Parameter name="In.lights.specularColors[0]" index="1"/>
+  </Parameters>
+
+  <Samplers>
+    <Sampler name="In.samplers.baseMap"/>
+    <Sampler name="In.samplers.normalMap"/>
+  </Samplers>
+
+</ShaderCache>

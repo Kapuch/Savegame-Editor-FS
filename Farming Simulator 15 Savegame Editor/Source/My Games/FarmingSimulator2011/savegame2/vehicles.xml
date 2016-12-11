@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<careerVehicles>
+    <vehicle filename="data/vehicles/steerable/lizard/lizard422.xml" isAbsolute="true" fuelFillLevel="140">
+       <component1 position="-20.000007629395 82.167549133301 -322.99984741211" rotation="3.1272788047791 -1.1449312296463e-005 -3.1415810585022" />
+    </vehicle>
+    <vehicle filename="data/vehicles/steerable/lizard/lizard58.xml" isAbsolute="true" fuelFillLevel="149.99999462074" grainTankFillLevel="0" grainTankFruitType="unknown">
+       <component1 position="-30.000009536743 82.111183166504 -322.99978637695" rotation="-3.1363797187805 -1.6786332707852e-005 -3.1412754058838" />
+       <component2 position="-31.261596679688 84.154273986816 -320.67233276367" rotation="-3.1363797187805 -1.6865151337697e-005 -3.1412754058838" />
+    </vehicle>
+    <vehicle filename="data/vehicles/cutters/lizard/lizard58Cutter.xml" isAbsolute="true">
+       <component1 position="-30.001991271973 82.282318115234 -329.93835449219" rotation="0.2729520201683 -0.0016327580669895 0.00068323797313496" />
+    </vehicle>
+    <vehicle filename="data/vehicles/trailers/smallTipper.xml" isAbsolute="true" fillLevel="0" fillType="unknown">
+       <component1 position="-15.000296592712 82.134986877441 -302.9997253418" rotation="-3.1392333507538 -0.00043797426042147 3.1414220333099" />
+       <component2 position="-15.002668380737 82.128051757813 -306.42864990234" rotation="-3.1413865089417 -0.00068596028722823 3.1391975879669" />
+    </vehicle>
+    <vehicle filename="data/vehicles/tools/cultivator01.xml" isAbsolute="true">
+       <component1 position="-19.999988555908 82.118919372559 -303.00003051758" rotation="-3.1414675712585 2.5544700292812e-006 3.1415910720825" />
+    </vehicle>
+    <vehicle filename="data/vehicles/tools/sowingMachine01.xml" isAbsolute="true" fillLevel="0" fillType="unknown" selectedSeedFruitType="wheat">
+       <component1 position="-24.999837875366 82.017349243164 -303.0256652832" rotation="2.7839775085449 -0.00057286332594231 -3.1415886878967" />
+    </vehicle>
+    <vehicle filename="data/vehicles/tools/plough01.xml" isAbsolute="true">
+       <component1 position="-30.000047683716 82.09220123291 -302.99996948242" rotation="3.1412093639374 7.3782095569186e-005 3.1412715911865" />
+    </vehicle>
+    <vehicle filename="data/vehicles/tools/triton200.xml" isAbsolute="true" fillLevel="0" fillType="unknown">
+       <component1 position="-34.999965667725 82.15047454834 -303" rotation="-3.1415920257568 1.4439089000007e-006 3.1396465301514" />
+    </vehicle>
+    <vehicle filename="data/vehicles/steerable/lizard/lizard2850.xml" isAbsolute="true" fuelFillLevel="110">
+       <component1 position="207.99995422363 91.951179504395 -770" rotation="-0.0053544351831079 1.7955318980967e-005 -0.0024238117039204" />
+    </vehicle>
+    <vehicle filename="data/vehicles/steerable/lizard/lizard7210.xml" isAbsolute="true" fuelFillLevel="150" grainTankFillLevel="0" grainTankFruitType="unknown">
+       <component1 position="145.49417114258 85.871032714844 633.99468994141" rotation="3.0975451469421 -0.0010125320404768 3.1031680107117" />
+       <component2 position="144.1083984375 88.20393371582 635.57305908203" rotation="3.0975360870361 -0.0011570551432669 3.1032063961029" />
+    </vehicle>
+    <vehicle filename="data/vehicles/cutters/lizard/lizardCutter7210.xml" isAbsolute="true">
+       <component1 position="145.54756164551 86.533935546875 629.03155517578" rotation="0.17091326415539 0.020911393687129 -0.062610648572445" />
+    </vehicle>
+</careerVehicles>

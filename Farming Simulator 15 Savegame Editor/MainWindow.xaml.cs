@@ -1,20 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.IO; //Directory
-using Microsoft.Win32; //OpenFileDialog
-using System.Xml;
 
 namespace Farming_Simulator_15_Savegame_Editor
 {
@@ -26,19 +15,19 @@ namespace Farming_Simulator_15_Savegame_Editor
         public MainWindow()
         {
             InitializeComponent();
-            listBox = ControlListGenerate.listBox(this);
-            FileSelection.dirAutoSearch(this);     
+            listBox = ControlListGenerate.listBox(this); //przypisanie kontrolek do listy gdy okno zostanie otwarte
+            FileSelection.dirAutoSearch(this); //automatyczne wyszukiwanie katalogów w folderze Dokumenty
         }
         ///<summary>Lista kontrolek textBox</summary>
         List<TextBox> listBox = new List<TextBox>();
-        string savePath = null;
-        string economyPath = null;
+        string savePath = null; //przechowuje sciezke dla careerSavegame.xml
+        string economyPath = null; //przechowuje sciezke dla economy.xml
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            savePath = FileSelection.manualChoice(this);
-            Savegame.Load(savePath, this, listBox);
-            FieldManageButton.IsEnabled = false;
+            savePath = FileSelection.manualChoice(this); //przypisanie scieżki z ręcznego wyboru pliku
+            Savegame.Load(savePath, this, listBox); //wczytanie zawartosci pliku do kontrolek
+            FieldManageButton.IsEnabled = false; // <--- zazadzanie polami w wyborze recznym niedostepne, gdyż można wybrać plik który nie jest w sąsiedztwie z economy.xml
             statusLabel.Content = "Wybrano ręcznie";
         }
 
@@ -47,7 +36,7 @@ namespace Farming_Simulator_15_Savegame_Editor
             if (DIRcomboBox.SelectedIndex > 0)
             {
                 SAVEcomboBox.IsEnabled = true;
-                FileSelection.saveAutoSearch(this);
+                FileSelection.saveAutoSearch(this);  //przeszukanie wybranego katalogu wzgledem warunku istnienia savegame, istnienie wielu katalogów nie oznacza że istnieje także save w tym katalogu
             }
             else
             {
@@ -64,25 +53,25 @@ namespace Farming_Simulator_15_Savegame_Editor
                 Savegame.Load(savePath, this, listBox);
                 statusLabel.Content = SAVEcomboBox.Text + " (" + DIRcomboBox.Text + ")";
                 economyPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\My Games\" + DIRcomboBox.Text + @"\" + SAVEcomboBox.Text + @"\economy.xml";
-                FieldManageButton.IsEnabled = File.Exists(economyPath) ? true : false;
+                FieldManageButton.IsEnabled = File.Exists(economyPath) ? true : false; //jeżeli economy.xml istnieje, możliwe będzie zarządanie polami
             }
         }
 
         private void saveButton_Click(object sender, RoutedEventArgs e)
         {
-            Savegame.Save(savePath, this);
+            Savegame.Save(savePath, this); //zapisanie zawartosci kontrolek do pliku
         }
 
-        private void Box_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        private void Box_PreviewTextInput(object sender, TextCompositionEventArgs e) //ograniczenie kontrolek do wprowadzania wylacznie cyfr
         {
-            if (!char.IsDigit(e.Text, e.Text.Length - 1))
+            if (!char.IsDigit(e.Text, e.Text.Length - 1)) 
                 e.Handled = true;
         }
 
         private void FieldManageButton_Click(object sender, RoutedEventArgs e)
         {
-            FieldManageWindow economyWindow = new FieldManageWindow(economyPath);
-            economyWindow.Show();
+            FieldManageWindow economyWindow = new FieldManageWindow(economyPath); //tworzymy okno zarzadzania polami
+            economyWindow.Show(); //wyswietlamy utworzone okno
         }
     }
 }

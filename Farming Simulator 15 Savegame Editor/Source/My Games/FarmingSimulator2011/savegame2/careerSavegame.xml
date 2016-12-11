@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<careerSavegame revision="1" valid="true" money="6000" dayTime="405.998962" playTime="0.374935" densityMapRevision="1" resetVehicles="false" mapId="Map01" difficulty="2" autoBackupIndex="1" fuelUsage="0.000005" seedUsage="0.000000" traveledDistance="0.000002" hectaresSeeded="0.000000" seedingDuration="0.000000" hectaresThreshed="0.000000" threshingDuration="0.000000" revenue="0.000000" expenses="0.000000" numCows="0" milkProductionScale="1.000000" milkPriceScale="1.000000" manureProductionScale="1.000000" timeUntilNextRain="7455.000977" timeUntilRainAfterNext="7032.000000" rainTime="0.000000" nextRainDuration="127.000000" nextRainType="0" rainTypeAfterNext="0" nextRainValid="true" currentDay="1" saveDate="11.27.2016" foundBottleCount="0" deliveredBottles="0" foundBottles="0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" reputation="0" foundInfoTriggers="00000000000000000000">
+    <farmSiloAmounts count="9">
+        <farmSiloAmount fillType="grass" amount="0.000000" />
+        <farmSiloAmount fillType="maize" amount="8055.000000" />
+        <farmSiloAmount fillType="barley" amount="8646.000000" />
+        <farmSiloAmount fillType="liquidManure" amount="0.000000" />
+        <farmSiloAmount fillType="manure" amount="0.000000" />
+        <farmSiloAmount fillType="dryGrass" amount="0.000000" />
+        <farmSiloAmount fillType="chaff" amount="0.000000" />
+        <farmSiloAmount fillType="wheat" amount="8994.000000" />
+        <farmSiloAmount fillType="rape" amount="8998.000000" />
+    </farmSiloAmounts>
+    <fruitPrices count="7">
+        <fruitPrice fruitType="wheat" price="0.400000" yesterdaysPrice="0.400000" />
+        <fruitPrice fruitType="maize" price="0.400000" yesterdaysPrice="0.400000" />
+        <fruitPrice fruitType="chaff" price="0.400000" yesterdaysPrice="0.400000" />
+        <fruitPrice fruitType="barley" price="0.400000" yesterdaysPrice="0.400000" />
+        <fruitPrice fruitType="rape" price="0.800000" yesterdaysPrice="0.800000" />
+        <fruitPrice fruitType="grass" price="0.400000" yesterdaysPrice="0.400000" />
+        <fruitPrice fruitType="dryGrass" price="0.450000" yesterdaysPrice="0.450000" />
+    </fruitPrices>
+</careerSavegame>
