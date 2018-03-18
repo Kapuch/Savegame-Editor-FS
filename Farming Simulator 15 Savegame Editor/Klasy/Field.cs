@@ -5,4 +5,4 @@
         public string Numer { get; set; } //przechowuje numer pola
         public bool Stan { get; set; } //przechowuje stan pola (czy posiadamy)
     }
-}//2qtasy!@
+}//2qtasy!@@@
